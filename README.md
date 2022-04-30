@@ -9,6 +9,7 @@ INTEGRANTES:
 Elian Velez,
 Felipe Nougues,
 July Zamora,
+stefano
 -----------------
 PÁGINAS DE REFERENCIA:
 * https://rogueandwolf.com/ : Quizás no sea tal cual lo que hacemos, pero nuestra referencia principal es la variedad de estilos que hay a pesar de no tener una extensa gama de colores.
