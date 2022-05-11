@@ -19,3 +19,7 @@ lo consideramos bastante acertado e intuitivo, y se acerca bastante a lo queremo
 idea general de lo que nosotros hacemos, podrá parecer repetitivo vestidos con el mismo estampado pero la diferencia principal son los diseños de las prendas.
 * https://thereformation.com/ : Aquí la referencia principal son cosas pequeñas en parte el estilo de la página y las secciones de calzado y vestidos que simples son bastante acertados y casuales.
 * https://lapercha.com.co/ : Nuestra referencia  principal de aquí es enteramente el apartado de chaquetas.
+
+-----------------
+
+Link al tablero de trabajo:
