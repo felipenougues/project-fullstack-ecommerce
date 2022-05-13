@@ -22,4 +22,4 @@ idea general de lo que nosotros hacemos, podrá parecer repetitivo vestidos con 
 
 -----------------
 
-Link al tablero de trabajo:
+Link al tablero de trabajo: https://github.com/users/julyzamora30/projects/1/views/1?layout=board
