@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cuadrante {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.01cm;
+    padding-left: 5%;
+    padding-right: 5%;
+}
