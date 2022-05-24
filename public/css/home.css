@@ -1,0 +1,62 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.into_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    margin: 5%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.nombre_marca {
+    font-size: 100px;
+    font-family: 'Galada', sans-serif;
+    color: white;
+}
+
+.burger {
+    width: 50%;
+    text-align: right;
+    margin: 5%;
+    color: white
+}
+
+.fa-bars {
+    font-size: 100px;
+}
+
+header {
+    background: #00304E;
+}
+
+ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
