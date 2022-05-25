@@ -4,13 +4,17 @@ body{
 
 main{
     min-height: 100vh;
-    background: lightblue;
+    background: lightseagreen;
 }
 
 section{
-    width: 100%;
-    padding: 1rem;
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
     text-align: left;
+    background: lightblue;
 }
 
 
@@ -38,6 +42,7 @@ p{
     font-size:.6rem;
     margin-left: 4px;
 }
+
 .star{
     font-size: .4rem;
     color: white;
@@ -63,10 +68,15 @@ p{
     opacity: .5;
 }
 
+.product__info h4, .product__info .product__rating{
+    display: none;
+}
+
 .info__price{
     display: flex;
     align-items: center;
-    font-size: .93rem;    
+    font-size: .93rem;
+    margin: 10px 0;
 }
 .info__price p{
     margin-right: 5px;
@@ -104,6 +114,7 @@ p{
     font-size: .8rem;
     background:lightseagreen;
     color: white;
+    cursor: pointer;
     transition: all .4s ease;
 }
 .info__stock select:hover{
@@ -120,6 +131,7 @@ p{
     padding: 5px;
     font-size: .9rem;
     color: white;
+    cursor: pointer;
     transition: all .4s ease;
 }
 .product__info button:hover{
@@ -194,8 +206,7 @@ p{
 
 
 .images__mosaic{
-    display: flex;
-    justify-content: space-between;
+    height: 100px;
     display: none;
 }
 
@@ -204,12 +215,52 @@ p{
     height: auto;
     border: 1px solid gainsboro;
     border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
     object-fit: cover;
     transition: opacity 0.5s ease;
 }
 
 .images__mosaic img:hover{
-    border: 1px solid black;
+    border: 1px solid white;
     opacity: 0.5;
 }
 
+
+
+@media (min-width:460px){
+    .product__info h4, .product__info .product__rating{
+        display: flex;
+    }
+
+    section > h4, section .product__rating{
+        display: none;
+    }
+    
+    .product__layout{
+        display: flex;
+    }
+    .product__images{
+        flex: 50%;
+    }
+    .product__info{
+        flex: 50%;
+        margin-left: 20px;
+        border: 1px solid gainsboro;
+        padding: 15px;
+    }
+}
+
+@media (min-width:768px){
+
+    .product__images{
+        flex: 65%;
+    }
+    .product__info{
+        flex: 35%;
+    }
+    .images__mosaic{
+        display: flex;
+        justify-content: center;
+    }
+}
