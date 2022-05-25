@@ -1,13 +1,16 @@
+body{
+    font-size: 16px;
+}
 
 main{
-    max-width: 100%;
     min-height: 100vh;
     background: lightblue;
 }
 
 section{
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
+    text-align: left;
 }
 
 
@@ -17,10 +20,35 @@ img{
     object-fit: contain;
 }
 
+h4{
+    font-size: 1rem;
+    font-weight: 200;
+}
+h6{
+    font-size: .8rem;
+}
+p{
+    font-size: .75rem;
+}
+.product__rating{
+    display: flex;
+    align-items: center;
+}
+.product__rating p{
+    font-size:.6rem;
+    margin-left: 4px;
+}
+.star{
+    font-size: .4rem;
+    color: white;
+}
+.checked{
+    color: lightseagreen;
+}
+
 .images__main{
-   
-    width: 100%;
     height: 300px;
+    margin: .6rem 0;
 }
 
 .images__main img{
@@ -35,19 +63,97 @@ img{
     opacity: .5;
 }
 
-
-.product__description h2{
-    font-size: 1.4rem;
+.info__price{
+    display: flex;
+    align-items: center;
+    font-size: .93rem;    
+}
+.info__price p{
+    margin-right: 5px;
+}
+.info__price span{
+    color: rgb(0, 175, 35);
+    font-size: .8   rem;
 }
 
-.product__description p{
-    font-size: 0.7rem;
-    margin: 5px 0 10px;
+.info__shipping{
+    font-size: .84rem;
+    margin: 5px 0;
+}
+.truck{
+    border: 1px solid green;
+    border-radius: 50%;
+    font-size: 9px;
+    padding: 3px;
+    color: green;
+    margin-right: 4px;
 }
 
-.product__description h3{
-    font-size: 1.2rem;
+.info__stock{
+    display: flex;
 }
+.stock__sizes, .stock__units{
+    flex:50%;
+    font-size: 1.3rem;
+}
+.info__stock select{
+    border: none;
+    border-radius: 3px;
+    width: 50%;
+    height: 25px;
+    font-size: .8rem;
+    background:lightseagreen;
+    color: white;
+    transition: all .4s ease;
+}
+.info__stock select:hover{
+    opacity: .5;
+    border: 1px solid white;
+}
+.product__info button{
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background:rgb(8, 64, 185);
+    padding: 5px;
+    font-size: .9rem;
+    color: white;
+    transition: all .4s ease;
+}
+.product__info button:hover{
+    background: rgb(10, 145, 255);
+    color: black;
+    border: 1px solid white;
+    opacity: 0.5;
+}
+
+.cart{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+
+.info__description{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .product__sizes{
     display: flex;
