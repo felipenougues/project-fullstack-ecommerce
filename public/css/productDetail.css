@@ -121,6 +121,7 @@ p{
     opacity: .5;
     border: 1px solid white;
 }
+
 .product__info button{
     display: block;
     width: 100%;
@@ -153,57 +154,6 @@ p{
 .info__description{
     margin: 10px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.product__sizes{
-    display: flex;
-    margin-top: 5px;
-}
-
-.product__sizes input[type="radio"]{
-    display: none;
-}
-
-.product__sizes input[type="radio"]:hover + label{
-    background: rgb(10, 210, 255);
-    opacity: .6;
-    color: whitesmoke;
-}
-
-
-.product__sizes input[type="radio"]:checked + label{
-    background: rgb(10, 210, 255);
-    color: whitesmoke;
-    border: 1px solid black;
-}
-
-
-.product__sizes label{
-    height: 100%;
-    background: white;
-    font-size: .9rem;
-    padding: 0 .85rem;
-    border: 1px solid gainsboro;
-    border-radius: 4px;
-    display: block;
-    text-align: center;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
 
 .images__mosaic{
     height: 100px;
