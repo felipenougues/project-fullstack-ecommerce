@@ -149,3 +149,19 @@ footer{
     }
     
 }
+
+
+
+main section{
+    display: flex;
+    flex-flow: wrap;
+}
+
+main section article{
+    flex: 1 1 50%;
+}
+
+article img{
+    max-width:fit-content;
+    max-height: 400px;
+}
