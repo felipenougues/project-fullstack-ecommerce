@@ -15,7 +15,7 @@ body{
 
 img,picture{
     max-width: 100%;
-    display: block;
+    display: inline-block;
 }
 
 /* -------------- */
@@ -24,7 +24,7 @@ img,picture{
 :root{
     --Header-Background: ;
     --Body-Background: #f4eeeb;
-    --Text-Background: rgba(175, 151, 140, 0.3);
+    --Text-Background: rgba(175, 151, 140, 0.8);
     --Text: #af978c;
 }
 
@@ -33,97 +33,119 @@ img,picture{
 header {
     background: var(--Body-Background);
     text-align: center;
+    padding: 6px 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid black;
 }
 
 .banner{
     position: relative;
+    text-align: center;
 }
 .banner img{
     width: 100%;
     max-height: 900px;
     object-fit: cover;
+    display: block;
 }
 .banner__slogan{
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
-
+.banner__slogan p{
+    font-size: 1.4rem;
+    color: black;
+    margin-bottom: 20px;
+}
+.banner__slogan button{
+    font-size: 1rem;
+    background-color: var(--Text-Background);
+    color: white;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s ease;
+}
+.banner__slogan button:hover{
+    border: 1px solid white;
+    opacity: 0.7;
+}
 
 .into_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-.header__logo {
-    margin: 20px;
-    background-color: white;
-    border-radius: 50%;
+#burger__toggle{
+    display: none;
+}
+#burger__toggle:checked ~ .header__overlay{
+    height: 350px;
+}
+.burger{
+    font-size: 20px;
+}
+.header__overlay{
+    width: 60%;
+    height: 0px;
+    overflow: hidden;
+    background-color: #02173F;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .logo {
-    width: 100%;
+    width: 12%;
     border-radius: 50%;
 }
-
-.nombre_marca {
-    font-size: 100px;
-    font-family: 'Galada', sans-serif;
-    color: white;
+.header__icons i{
+    font-size: 18px;
+    margin-left: 8px;
 }
 
-.burger {
-    width: 30%;
-    text-align: right;
-    margin: 5%;
-    color: white
+.header__searchbar{
+    display: none;
 }
 
-.fa-bars {
-    font-size: 50px;
-}
-
-
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 20px;
-}
 
 li {
     list-style-type: none;
 }
 
-nav {
-    padding-top: 30px;
-    padding-bottom: 10px;
+main{
+    padding: 20px;
 }
-section{
+
+main h2{
+    color: white ;
+    background-color: var(--Text-Background);
     text-align: center;
 }
-article img{
-    height: 1000px;
-    width: 90%
-}
-article{
 
+
+
+article img{
+    width: 100%;
+    height: auto;
+}
+
+
+article{
+    text-align: center;
     margin-bottom: 20px;
     padding: 20px;
     border-color: grey;
 }
-article p{
-    font-size: 30px;
-    font-family: Calibri;
-}
-h3{
-    font-size: 40px;
-    margin: 20px;
-    font-family: 'Arial Narrow Bold', sans-serif;
-}
+
+
 .anterior_sell{
     display: flex;
     flex-direction: row;
@@ -155,13 +177,10 @@ button{
 footer{
     background-color: black;
     color: white;
-    font-size: 30px;
     text-align: center;
     padding: 20px;
 }
-.red{
-    font-size:100px;
-}
+
 .redes{
     display:flex;
     flex-direction: row;
@@ -170,34 +189,32 @@ footer{
 .into_redes{
     color: white;
 }
-@media(min-width: 769px){
-    .burger {
-        width: 0px;
-        text-align: right;
-        margin: 0px;
-    }
-    .fa-bars {
-        font-size: 0px;
-        display: none;
-    }
-    .nombre_marca{
-        font-size: 0px;
-    }
+
+footer h3{
+    margin: 18px 0 6px 0;
+}
+
+footer i{
+    font-size: 20px;
+}
+
+@media(min-width: 461px){
+    /* Tablets */
     
 }
+@media(min-width: 769px){
+    /* Desktop */
 
-
-
-main section{
-    display: flex;
-    flex-flow: wrap;
-}
-
-main section article{
-    flex: 1 1 50%;
-}
-
-article img{
-    max-width:fit-content;
-    max-height: 400px;
+    .burger {
+        display: none;
+    }
+    main section{
+        display: flex;
+        flex-flow: wrap;
+    }
+    
+    main section article{
+        flex: 1 1 50%;
+    }
+    
 }

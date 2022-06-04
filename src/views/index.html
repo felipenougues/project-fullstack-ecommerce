@@ -16,9 +16,27 @@
 <body>
     <header>
         <div class="into_header">
-            <div class="header__logo">
-                <img class="logo" src="/images/logo_pagina.png" alt="logo">
+            <div class="header__navbar">
+                <input id="burger__toggle" type="checkbox" />
+                <label for="burger__toggle">
+                    <i class="fas fa-bars burger"></i>
+                </label>
+                <nav class="header__overlay">
+                    <ul>
+                        <li><a href="#">HOMBRES</a></li>
+                        <li><a href="#">MUJERES</a></li>
+                        <li><a href="#">NIÑOS</a></li>
+                        <li><a href="#">DUDAS</a></li>
+                    </ul>
+                </nav>
             </div>
+            <img class="logo" src="/images/logo_pagina.png" alt="logo">
+            <div class="header__icons">
+                <i class="fas fa-search search"></i>
+                <i class="fas fa-shopping-bag bag"></i>
+            </div>
+            
+
             <!--
             <div class="tipos">
                 <a href="https://facebook.com"><i class="fa-solid fa-bell icono"></i></a>
@@ -28,22 +46,14 @@
                 <a><i class="fa-solid fa-magnifying-glass icono"></i></a>
             </div>
             -->
-            <div class="burger">
-                <p><i class="fas fa-bars"></i></p>
-            </div>
+            
         </div>
-        <form action="" method="get">
-            <input type="text">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-        <nav>
-            <ul>
-                <li><a>HOMBRES</a></li>
-                <li><a>MUJERES</a></li>
-                <li><a>NIÑOS</a></li>
-                <li><a>DUDAS</a></li>
-            </ul>
-        </nav>
+        <div class="header__searchbar">
+            <form action="" method="get">
+                <input type="text">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
     </header>
     <section class="banner">
         <img class="banner__img" src="/images/banner.jpg" alt="banner">
@@ -57,47 +67,48 @@
         <section>
             <article>
                 <a href="/products/productDetail"><img src="images/prenda1.jpg" alt="prenda1"></a>
+                <h3>VESTIDO RETAZEADO</h3>
                 <div class="anterior_sell">
                     <p class="precio_ant">US$150</p>
                     <p class="precio_ahora">US$100</p>
                 </div>
-                <h3>VESTIDO RETAZEADO</h3>
             </article>
             <article>
                 <a href="/products/productDetail"><img src="images/prenda2.jpg" alt="prenda2"></a>
+                <h3>CHAQUETA TEXTURIZADA</h3>
                 <div class="anterior_sell">
                     <p class="precio_ant">US$130</p>
                     <p class="precio_ahora">US$85</p>
                 </div>
-                <h3>CHAQUETA TEXTURIZADA</h3>
             </article>
             <article>
                 <a href="/products/productDetail"><img src="images/prenda3.jpg" alt="prenda3"></a>
+                <h3>CONJUNTO A CUADROS</h3>
                 <div class="anterior_sell">
                     <p class="precio_ant">US$150</p>
                     <p class="precio_ahora">US$120</p>
                 </div>
-                <h3>CONJUNTO A CUADROS</h3>
             </article>
             <article>
                 <a href="/products/productDetail"><img src="images/prenda4.jpg" alt="prenda4"></a>
+                <h3>CHAQUETA RETAZEADA</h3>
                 <div class="anterior_sell">
                     <p class="precio_ant">US$170</p>
                     <p class="precio_ahora">US$130</p>
                 </div>
-                <h3>CHAQUETA RETAZEADA</h3>
             </article>
         </section>
     </main>
     <footer>
         <div>
-            <h2>CONTACTO <i class="fa-solid fa-address-card"></i></h2>
+            <h3>CONTACTO</h3>
+            <i class="fa-solid fa-address-card"></i>
             <h3>CORREO</h3>
             <p>Veffaly@gmail.com</p>
             <h3>NÚMERO</h3>
             <P>+57 3224567839</P>
         </div>
-            <h2>REDES SOCIALES <i class="fa-solid fa-circle-question"></i></h2>
+            <h3>REDES SOCIALES</h3>
             <div class="redes">
                 <div class="red"><a href="" class="into_redes"><i class="fa-brands fa-tiktok"></i></a></div>
                 <div class="red"><a href="" class="into_redes"><i class="fa-brands fa-facebook"></i></a></div>
