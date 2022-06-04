@@ -17,3 +17,8 @@
     padding-left: 5%;
     padding-right: 5%;
 }
+
+main {
+    background: url("/images/banner.jpg") no-repeat;
+    background-size: 100% 100vh;
+}
