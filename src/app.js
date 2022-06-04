@@ -7,6 +7,7 @@ const productsRoutes = require('./routers/productsRoutes');
 const usersRoutes = require("./routers/usersRoutes")
 
 app.set("view engine","ejs");
+app.set('views',__dirname + '/views')
 
 app.use(express.static(path.join(__dirname, './public')));
 

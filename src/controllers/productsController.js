@@ -1,7 +1,7 @@
 const path = require('path')
 const controller = {
-    productCart: (req,res) => res.sendFile(path.join(__dirname,"../views/products/productCart.html")),
-    productDetail: (req,res) => res.sendFile(path.join(__dirname,"../views/products/productDetail.html")),
+    productCart: (req,res) => res.render('products/productCart'),
+    productDetail: (req,res) => res.render('products/productDetail'),
 }
 
 
