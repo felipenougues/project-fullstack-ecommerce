@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d84fe97ca7.js" crossorigin="anonymous"></script>
-    <title>Register</title>
-    <link rel="stylesheet" href="/public/css/register.css">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="/css/normalize.CSS">
     <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
 </head>
@@ -15,28 +14,11 @@
 <body>
     <header>
         <div class="into_header">
-            <div class="header__logo">
-                <img class="logo" src="/images/logo_pagina.png" alt="logo">
-            </div>
-            <div>
-                <p class="nombre_marca">Veffaly</p>
-            </div>
-            <div class="burger">
-                <p><i class="fas fa-bars"></i></p>
-            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a>HOMBRES</a></li>
-                <li><a>MUJERES</a></li>
-                <li><a>NIÑOS</a></li>
-                <li><a>DUDAS</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         <form action="/views/register.html" method="get">
-            <fieldset class="caja-formulario">
+            <div class="caja-formulario">
                 <input type="text" name="user" placeholder="Nombre y apellido" class="inputs-formulario" minlength="3" required>
                 <input type="text" name="user" placeholder="Nombre de usuario" class="inputs-formulario" minlength="3" required>
                 <input type="password" name="pass" placeholder="Crea tu contraseña" class="inputs-formulario">
@@ -44,23 +26,21 @@
                 <label for="fecha" class="mayusculas">Fecha de nacimiento</label>
                 <input type="date" id="fecha" class="inputs-formulario">
                 <input type="text" placeholder="Domicilio" class="inputs-formulario">
-
-                <label for="text" class="mayusculas">Intereses</label><br>
+                <label for="text" class="mayusculas">Intereses</label>
                 <input type="checkbox" name="hombres" id="hombres">
-                <label for="hombres">Hombres</label><br>
+                <label for="hombres">Hombres</label>
                 <input type="checkbox" name="mujeres" id="mujeres">
-                <label for="mujeres">Mujeres</label><br>
+                <label for="mujeres">Mujeres</label>
                 <input type="checkbox" name="ninos" id="ninos">
-                <label for="ninos">Niños</label><br>
-                <form name="subida-imagenes" type="POST" enctype="multipart/formdata">
+                <label for="ninos">Niños</label>
+                <form class="inputs-formulario" name="subida-imagenes" type="POST" enctype="multipart/formdata">Foto de Usuario
                     <input type="file" class="inputs-formulario" name="imagen" />
-                </form>
                 <input type="text" placeholder="Contraseña" class="inputs-formulario">
                 <input type="text" placeholder="Confirmar contraseña" class="inputs-formulario">
-                <a href="/views/index.html">
-                    <input type="submit" value="Enviar" class="boton">
+                <a class="boton" href="/views/index.html">
+                    <input class="botonInput" type="submit" value="Enviar">
                 </a>
-            </fieldset>
+            </div>
         </form>
     </main>
     <footer></footer>
