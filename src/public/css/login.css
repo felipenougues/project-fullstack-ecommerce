@@ -19,8 +19,33 @@ main {
 
 .cuadrante {
     text-align: center;
-    border: 1px solid black;
+    border: 1px;
     background-color: #f4eeeb;
     width: 600px;
     opacity: 80%;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.redes{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.into_redes{
+    color: white;
+}
+
+footer h3{
+    margin: 18px 0 6px 0;
+}
+
+footer i{
+    font-size: 20px;
 }
