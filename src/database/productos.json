@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Vestido Retazeado",
+        "precio_ant": "US$150",
+        "precio": "US$100",
+        "imagen": "prenda1.jpg"
+    },
+    {
+        "nombre": "Chaqueta Texturizada",
+        "precio_ant": "US$130",
+        "precio": "US$85",
+        "imagen": "prenda2.jpg"
+    },
+    {
+        "nombre": "Conjunto a Cuadros",
+        "precio_ant": "US$150",
+        "precio": "US$120",
+        "imagen": "prenda3.jpg"
+    },
+    {
+        "nombre": "Chaqueta Retazeada",
+        "precio_ant": "US$170",
+        "precio": "US$130",
+        "imagen": "prenda4.jpg"
+    }
+]
