@@ -9,7 +9,7 @@
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
     <main>
         <section class="product">
-            <h4>Prenda Modelo</h4>
+            <h4><%= producto.nombre %></h4>
             <div class="product__rating">
                 <i class="fas fa-star star checked"></i>
                 <i class="fas fa-star star checked"></i>
@@ -21,16 +21,16 @@
             <div class="product__layout">
                 <div class="product__images">
                     <div class="images__main">
-                       <img src="/images/prenda1.jpg" alt="prenda1">
+                       <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
                     </div>
                     <div class="images__mosaic">
-                        <img src="/images/prenda1.jpg" alt="prenda1">
-                        <img src="/images/prenda1.jpg" alt="prenda1">
-                        <img src="/images/prenda1.jpg" alt="prenda1">
+                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
                     </div>
                 </div>
                 <div class="product__info">
-                    <h4>Prenda Modelo</h4>
+                    <h4><%= producto.nombre %></h4>
                     <div class="product__rating">
                         <i class="fas fa-star star checked"></i>
                         <i class="fas fa-star star checked"></i>
