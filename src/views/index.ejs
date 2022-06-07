@@ -18,38 +18,24 @@
     <main>
         <h2>PROMOCIONES</h2>
         <section>
-            <article>
-                <a href="/products/productDetail"><img src="images/prenda1.jpg" alt="prenda1"></a>
-                <h3>VESTIDO RETAZEADO</h3>
-                <div class="anterior_sell">
-                    <p class="precio_ant">US$150</p>
-                    <p class="precio_ahora">US$100</p>
-                </div>
-            </article>
-            <article>
-                <a href="/products/productDetail"><img src="images/prenda2.jpg" alt="prenda2"></a>
-                <h3>CHAQUETA TEXTURIZADA</h3>
-                <div class="anterior_sell">
-                    <p class="precio_ant">US$130</p>
-                    <p class="precio_ahora">US$85</p>
-                </div>
-            </article>
-            <article>
-                <a href="/products/productDetail"><img src="images/prenda3.jpg" alt="prenda3"></a>
-                <h3>CONJUNTO A CUADROS</h3>
-                <div class="anterior_sell">
-                    <p class="precio_ant">US$150</p>
-                    <p class="precio_ahora">US$120</p>
-                </div>
-            </article>
-            <article>
-                <a href="/products/productDetail"><img src="images/prenda4.jpg" alt="prenda4"></a>
-                <h3>CHAQUETA RETAZEADA</h3>
-                <div class="anterior_sell">
-                    <p class="precio_ant">US$170</p>
-                    <p class="precio_ahora">US$130</p>
-                </div>
-            </article>
+            
+            <% for(let i=0;i<productos.length; i++){ %>
+                <article>
+                    <a href=<%= `/products/productDetail/${productos[i].id}` %>><img src= <%= `/images/${productos[i].imagen}` %> alt="producto"></a>
+                    <h3><%= productos[i].nombre %></h3>
+                    <div class="anterior_sell">
+                        <p class="precio_ant">
+                            <%= productos[i].precio_ant %>
+                        </p>
+                        <p class="precio_ahora">
+                            <%= productos[i].precio %>
+                        </p>
+                    </div>
+                </article>
+            <% } %>
+
+            
+
         </section>
     </main>
     <%- include('partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
