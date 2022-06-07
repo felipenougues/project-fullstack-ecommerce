@@ -106,7 +106,7 @@ header {
 }
 
 .header__overlay {
-    width: 60%;
+    width: 100%;
     height: 0px;
     overflow: hidden;
     background-color: #02173F;
@@ -114,6 +114,37 @@ header {
     left: 0;
     z-index: 1;
     transition: all 0.3s ease;
+}
+
+.header__overlay li a {
+    color: white;
+    text-decoration: none;
+    align-items: left;
+    padding-left: 1.5rem;
+}
+
+.header__overlay li a:hover {
+    cursor: pointer;
+    transform: scale(2);
+    color: orange;
+    transition: 0.5s;
+}
+
+header .nav-li {
+    margin-top: 1rem;
+    line-height: 2rem;
+    padding: 1.4rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    box-sizing: content-box;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .logo {
@@ -125,6 +156,12 @@ header {
 .logo {
     filter: brightness(1.1);
     mix-blend-mode: multiply;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
 }
 
 .header__icons i {
@@ -200,6 +237,13 @@ footer {
     padding: 20px;
 }
 
+footer i:hover {
+    cursor: pointer;
+    transform: scale(2);
+    color: orange;
+    transition: 0.5s;
+}
+
 .redes {
     display: flex;
     flex-direction: row;
@@ -216,6 +260,10 @@ footer h3 {
 
 footer i {
     font-size: 20px;
+}
+
+footer .box-contacto {
+    margin-bottom: 2rem;
 }
 
 @media(min-width: 461px) {
@@ -244,5 +292,12 @@ footer i {
     }
     article img {
         height: 300px;
+    }
+    footer .box-contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
     }
 }
