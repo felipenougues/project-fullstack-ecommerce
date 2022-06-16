@@ -144,12 +144,64 @@ header .nav-li {
 
 .header__icons{
     text-align: end;
+    position: relative;
 }
 
 .header__icons i {
     font-size: 18px;
     margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
+
+.header__icons i:hover{
+    opacity: 0.5;
+}
+
+.user {
+    border: 1.5px solid var(--Text);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/*--------------- User Overlay Setup ------------------*/
+
+#user__toggle {
+    display: none;
+}
+
+#user__toggle:checked~.user__overlay {
+    height: 40vh;
+    width: 180px;
+}
+
+.user__overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(175, 151, 140, 0.9);
+    position: absolute;
+    right: -15px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.user__overlay li{
+    text-align: center;
+    padding: 10px;
+}
+.user__overlay li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.user__overlay li a:hover {
+    background-color: rgba(141, 92, 59, 0.406);
+    color: orange;
+}
+
+/*--------------- User Overlay Setup ------------------*/
 
 .header__searchbar {
     display: none;
