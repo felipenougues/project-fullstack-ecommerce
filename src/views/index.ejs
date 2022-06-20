@@ -25,10 +25,10 @@
                     <h3><%= productos[i].nombre %></h3>
                     <div class="anterior_sell">
                         <p class="precio_ant">
-                            <%= productos[i].precio_ant %>
+                            USD $<%= productos[i].precio %>
                         </p>
                         <p class="precio_ahora">
-                            <%= productos[i].precio %>
+                            USD $<%= (productos[i].precio * (1 - productos[i].descuento / 100)) %>
                         </p>
                     </div>
                 </article>
