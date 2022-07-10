@@ -66,6 +66,11 @@
                         <h6>Descripción</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ratione voluptas atque placeat id mollitia sapiente at autem excepturi natus omnis saepe repudiandae, quas ullam, quidem facere? Modi, eos suscipit!</p>
                     </div>
+                   
+                    <a href="/products/productEdit/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+					<form action="/productsRoutes/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+					</form>
                 </div>
             </div>
         </section>

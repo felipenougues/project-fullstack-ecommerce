@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<head>
+    <%- include('../partials/head.ejs') %>         <!-- Inclusión de Head con EJS -->
+    <link rel="stylesheet" href="/css/productCreate.css">
+    <title>Creación de Producto</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
+
+	<div class="caja-formulario">
+		<div >
+			<div>
+				<h2>Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div >
+			<form action="/products/productsCreate" method="post">
+				<div  class="caja-formulario">
+					<div >
+						<label class="align-formulario" for="name" >Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Vestido Retazeado" class="inputs-formulario">
+					</div>
+					<div >
+						<label class="align-formulario" for="price" >Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 120" class="inputs-formulario">
+					</div>
+					<div >
+						<label class="align-formulario" for="discount" >Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="inputs-formulario">
+					</div>
+					
+					<div >
+						<label class="align-formulario" for="description" >Descipción:</label>
+						<textarea name="description" id="description" class="inputs-formulario"></textarea>
+					</div>
+					<div >
+						<button type="submit" class="boton-input">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<%- include('../partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
+</body>	
+</html>

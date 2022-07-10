@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>         <!-- Inclusión de Head con EJS -->
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
+    <main>
+        <section>
+            
+            <% for(let i=0;i<productos.length; i++){ %>
+                <article>
+                    <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/<%= productos[i].imagen %>" alt="producto<%= productos[i].id %>"></a>
+                    <h3><%= productos[i].nombre %></h3>
+                    <div class="anterior_sell">
+                        <p class="precio_ant">
+                            USD $<%= productos[i].precio %>
+                        </p>
+                        <p class="precio_ahora">
+                            USD $<%= (productos[i].precio * (1 - productos[i].descuento / 100)) %>
+                        </p>
+                    </div>
+                </article>
+            <% } %>
+
+            
+
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
+</body>
+</html>
