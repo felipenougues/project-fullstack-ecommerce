@@ -238,21 +238,22 @@ header .nav-li {
 .banner__slogan {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .banner__slogan p {
     font-size: 1.4rem;
-    color: black;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px brown;
     margin-bottom: 20px;
 }
 
 .banner__slogan button {
     font-size: 1rem;
     background-color: var(--Text-Background);
-    color: white;
+    color: brown;
     width: 120px;
     border: none;
     border-radius: 5px;
@@ -262,7 +263,10 @@ header .nav-li {
 .banner__slogan button:hover {
     border: 1px solid white;
     opacity: 0.7;
+    
+
 }
+
 
 li {
     list-style-type: none;
