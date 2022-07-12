@@ -79,7 +79,7 @@ li {
 }
 
 body {
-    background-image: url("/images/banner.jpg");
+    background: url("/images/banner.jpg") no-repeat fixed;
     background-size: 100%;
 }
 

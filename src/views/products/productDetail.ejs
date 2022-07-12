@@ -21,12 +21,12 @@
             <div class="product__layout">
                 <div class="product__images">
                     <div class="images__main">
-                       <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
+                       <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
                     </div>
                     <div class="images__mosaic">
-                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
-                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
-                        <img src=<%= `/images/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
                     </div>
                 </div>
                 <div class="product__info">
@@ -50,6 +50,7 @@
                                 <option value="small">S</option>
                                 <option value="medium">M</option>
                                 <option value="large">L</option>
+                                <option value="xlarge">XL</option>
                             </select>
                         </div>
                         <div class="stock__units">

@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div >
-			<form action="/products/productCreate" method="post">
+			<form action="/products/productCreate" method="post" enctype="multipart/form-data">
 				<div  class="caja-formulario">
 					<div >
 						<label class="align-formulario" for="name" >Nombre del producto:</label>
@@ -31,12 +31,34 @@
 						<label class="align-formulario" for="discount" >Descuento:</label>
 						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="inputs-formulario">
 					</div>
+					<div>
+						<label for="category" class="align-formulario">Categoría:</label>
+						<select name="category" id="category" class="inputs-formulario">
+							<option value="">Elegí</option>
+							<option value="abrigos">Abrigos</option>
+							<option value="vestidos">Vestidos</option>
+						</select>
+					</div>
+					<div>
+						<label for="size" class="align-formulario">Talle:</label>
+						<select name="size" id="size" class="inputs-formulario">
+							<option value="">Elegí</option>
+							<option value="">S</option>
+							<option value="">M</option>
+							<option value="">L</option>
+							<option value="">XL</option>
+						</select>
+					</div>
 					
-					<div >
+					<div>
 						<label class="align-formulario" for="description" >Descipción:</label>
 						<textarea name="description" id="description" class="inputs-formulario"></textarea>
 					</div>
-					<div >
+					<div>
+						<label  class="align-formulario" for="productImage">Imagen de producto: </label>
+						<input type="file" id="productImage" name="productImage" class="inputs-formulario">
+					</div>
+					<div>
 						<button type="submit" class="boton-input">Guardar producto</button>
 					</div>
 				</div>

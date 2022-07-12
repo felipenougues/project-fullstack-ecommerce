@@ -1,38 +1,42 @@
 [
-    {   "id": 1,
-        "nombre": "Vestido Retazeado",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
-        "categoria": "vestidos",
-        "talles": "",
-        "precio": 100,
-        "descuento": 15,
-        "imagen": "prenda1.jpg"
-    },
-    {   "id": 2,
-        "nombre": "Chaqueta Texturizada",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
-        "categoria": "abrigos",
-        "talles": "",
-        "precio": 85,
-        "descuento": 15,
-        "imagen": "prenda2.jpg"
-    },
-    {   "id": 3,
-        "nombre": "Conjunto a Cuadros",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
-        "categoria": "vestidos",
-        "talles": "",
-        "precio": 120,
-        "descuento": 10,
-        "imagen": "prenda3.jpg"
-    },
-    {   "id": 4,
-        "nombre": "Chaqueta Retazeada",
-        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
-        "categoria": "abrigos",
-        "talles": "",
-        "precio": 130,
-        "descuento": 20,
-        "imagen": "prenda4.jpg"
-    }
+  {
+    "id": 1,
+    "nombre": "Vestido Retazeado",
+    "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
+    "categoria": "vestidos",
+    "talles": "S",
+    "precio": 100,
+    "descuento": 15,
+    "imagen": "prenda1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Chaqueta Texturizada",
+    "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
+    "categoria": "abrigos",
+    "talles": "M",
+    "precio": 85,
+    "descuento": 15,
+    "imagen": "prenda2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Conjunto a Cuadros",
+    "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
+    "categoria": "vestidos",
+    "talles": "L",
+    "precio": 120,
+    "descuento": 10,
+    "imagen": "prenda3.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Chaqueta Retazeada",
+    "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos sed esse obcaecati doloribus possimus dolore, soluta consectetur maxime nostrum, modi, ipsam dicta qui quae error voluptatibus vero numquam. Iure?",
+    "categoria": "abrigos",
+    "talles": "XL",
+    "precio": 130,
+    "descuento": 20,
+    "imagen": "prenda4.jpg"
+  }
 ]
