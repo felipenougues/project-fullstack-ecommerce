@@ -9,7 +9,7 @@
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
     <main>
         <section class="product">
-            <h4><%= producto.nombre %></h4>
+            <h4><%= producto.name %></h4>
             <div class="product__rating">
                 <i class="fas fa-star star checked"></i>
                 <i class="fas fa-star star checked"></i>
@@ -21,16 +21,16 @@
             <div class="product__layout">
                 <div class="product__images">
                     <div class="images__main">
-                       <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
+                       <img src=<%= `/images/products/${producto.image}` %> alt="prenda">
                     </div>
                     <div class="images__mosaic">
-                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
-                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
-                        <img src=<%= `/images/products/${producto.imagen}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.image}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.image}` %> alt="prenda">
+                        <img src=<%= `/images/products/${producto.image}` %> alt="prenda">
                     </div>
                 </div>
                 <div class="product__info">
-                    <h4><%= producto.nombre %></h4>
+                    <h4><%= producto.name %></h4>
                     <div class="product__rating">
                         <i class="fas fa-star star checked"></i>
                         <i class="fas fa-star star checked"></i>
@@ -40,7 +40,7 @@
                         <p>12 opiniones</p>
                     </div>
                     <div class="info__price">
-                        <p>$ <%= producto.precio %></p><span><%= producto.descuento %> % OFF</span>
+                        <p>$ <%= producto.price %></p><span><%= producto.discount %> % OFF</span>
                     </div>
                     <p class="info__shipping"><i class="fas fa-truck truck"></i>Envío gratis a todo el país</p>
                     <div class="info__stock">

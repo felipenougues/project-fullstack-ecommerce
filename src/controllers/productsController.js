@@ -31,13 +31,13 @@ const controller = {
 		const productos = readJsonFile(dbPath)
 		const producto = {
 			id: productos[productos.length -1].id + 1,
-			nombre: req.body.name,
-            descripcion: req.body.description,
-            categoria: req.body.category,
-            talles: req.body.size,
-			precio: req.body.price,
-			descuento: req.body.discount,
-			imagen: req.file?.filename || "banner1.jpg"
+			name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            size: req.body.size,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: req.file?.filename || "banner1.jpg"
 		}
 
 		productos.push(producto);
@@ -54,25 +54,23 @@ const controller = {
 		return res.render("products/productEdit", { product });
 	},
     productUpdate: (req, res) => {
-        return res.send("Producto Editado con Exito")
-		/*
         const productos = readJsonFile(dbPath)
 		for(let i = 0; i < productos.length; i++) {
-			if(productos[i].id == req.params.id){
-				productos[i] = {
+			if(productos[i].id == req.params.id){		 
+                productos[i] = {
 					...productos[i],
-					nombre: req.body.name,
-					precio: req.body.price,
-					descuento: req.body.discount,
-					categoria: req.body.category,
-					descripcion: req.body.description
+					name: req.body.name,
+					price: req.body.price,
+					discount: req.body.discount,
+					category: req.body.category,
+					description: req.body.description
 					//image: req.file?.filename || "default-image.png"
-				} 
+				}
 			}
 		};
 		fs.writeFileSync(dbPath, JSON.stringify(productos, null, 2));
+
 		return res.redirect("/products/productList");
-		*/
 
 	},
 
