@@ -45,7 +45,7 @@ body {
 }
 .Buscar input{
     width: 0px;
-    height: 40px;
+    height: 55px;
     font-size: 15px;
     color: black;
     outline: none;
@@ -57,31 +57,31 @@ body {
 .btn{
     position: absolute;
     top: 0;
-    right: 100px;
+    right: 130px;
     background-color: var(--Text);
     text-align: center;
-    width:40px;
-    height: 40px;
-    line-height: 40px;
+    width:55px;
+    height: 55px;
+    line-height: 55px;
     color: white;
     font-size: 20px;
     border-radius: 50%;
     cursor: pointer;
 }
 .Buscar:hover input{
-    width:180px;
+    width:280px;
     border-color: var(--Text);
 }
 .Buscar input:focus{
-    width:180px;
+    width:280px;
     border: var(--Text);
 }
 .Bolsa{
     background-color: var(--Text);
     text-align: center;
-    width:40px;
-    height: 40px;
-    line-height: 40px;
+    width:55px;
+    height: 55px;
+    line-height: 55px;
     color: white;
     font-size: 20px;
     border-radius: 50%;
@@ -92,16 +92,44 @@ body {
 .login{
     background-color: var(--Text);
     text-align: center;
-    width:40px;
-    height: 40px;
-    line-height: 40px;
+    width:55px;
+    height:55px;
+    line-height: 55px;
     color: white;
     font-size: 20px;
     border-radius: 50%;
     cursor: pointer;
+    margin-right: 90px;
 }
+.login{
+    margin: auto;
+}
+.login ul{
+    list-style: none;
+}
+.nav li a{
+    text-decoration: none;
 
-
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    background-color: var(--Text-Background) 
+}
+.nav > li{
+    float:left;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 1px;
+}
+.nav li:hover > ul{
+    display:block;
+}
+.nav li ul li{
+    position:relative;
+    left: -50px;
+}
 /* -------------- */
 
 
