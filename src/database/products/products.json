@@ -38,16 +38,5 @@
     "price": 130,
     "discount": 20,
     "image": "prenda4.jpg"
-  },
-  {
-    "id": 5,
-    "name": "NUEVO PRODUCTO EDITADO AHORA SI",
-    "description": "CREADO NUEVO",
-    "category": "abrigos",
-    "size": "",
-    "price": "105",
-    "discount": "10",
-    "image": "productImage-1657652543748-67369886.jpg",
-    "namee": "NUEVO PRODUCTO CREADO!!!!!"
   }
 ]

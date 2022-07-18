@@ -143,11 +143,18 @@ main a {
 
 main .mayusculas {
     font-weight: 50;
+    color: antiquewhite;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 120px;
 }
 .center {
     text-align: center;
+}
+main .text-danger {
+    color: red;
+    text-align: center;
+
 }
 footer{
     background-color: black;

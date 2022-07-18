@@ -1,20 +1,20 @@
 [
     {
-        "identificador": "1",
-        "nombre": "firstName",
-        "apellido": "lastName",
+        "id": "1",
+        "name": "firstName",
+        "lastName": "lastName",
         "email": "email",
-        "contraseña": "password",
-        "categoría": "category",
-        "avatar": "avatar"
+        "password": "password",
+        "category": "hombres",
+        "image": "avatar"
     },
     {
-        "identificador": "2",
-        "nombre": "firstName",
-        "apellido": "lastName",
+        "id": "2",
+        "name": "firstName",
+        "lastName": "lastName",
         "email": "email",
-        "contraseña": "password",
-        "categoría": "category",
-        "avatar": "avatar"
+        "password": "password",
+        "category": "mujeres",
+        "image": "avatar"
     }
 ]
