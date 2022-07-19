@@ -70,9 +70,9 @@ main h2{
 }
 
 .logo {
-    width: 12%;
-    max-width: 60px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 100px;
+    
 }
 .header__icons i{
     font-size: 18px;
