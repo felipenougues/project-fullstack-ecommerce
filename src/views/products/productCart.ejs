@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('../partials/head.ejs') %>         <!-- Inclusión de Head con EJS -->
-    <link rel="stylesheet" href="/css/productCart.css">
-    <title>Tu Bolso de Compras</title>
-</head>
+<%- include('../partials/head.ejs',{title:"Tu Bolso de Compras",stylesheets:["productCart.css"]}) %>
 <body>
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
     <main>
