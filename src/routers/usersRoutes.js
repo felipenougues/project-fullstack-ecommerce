@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
   
 
 
-  
+
 
 
 const { body } = require('express-validator');
@@ -61,6 +61,8 @@ router.post("/register", upload.single('image'), validations, usersController.pr
 
 
 router.get("/login", usersController.login);
+router.post("/login", usersController.loginProcess);
+
 
 
 module.exports = router
