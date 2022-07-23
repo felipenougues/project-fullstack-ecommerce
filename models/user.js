@@ -44,13 +44,15 @@ const User = {
         let users = usuarios.find(user => user[field] == text);
         return users;
     },
+
+    
     create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {
 			id: this.generateId(),
 			...userData
 		}
-        console.log(newUser)
+        
         allUsers.push(newUser);// si ejecuto la funcion CREATE genera un bucle infinito de creacion de usuarios
 
         fs.writeFileSync(path.join(__dirname,this.fileName), JSON.stringify(allUsers, null, ' '));

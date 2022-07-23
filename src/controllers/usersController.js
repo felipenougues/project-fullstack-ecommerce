@@ -14,7 +14,30 @@ const controller = {
                 oldData: req.body
             });
         }
-        return res.send('ok,las validaciones pasaron sin errores')
+
+        let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render('users/register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
+
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: req.file.filename
+        }
+
+        let userCreated = User.create(userToCreate);
+
+        return res.redirect('/users/login')
     },
 
     login: (req,res) => res.render('users/login'),

@@ -1,38 +1,11 @@
 [
  {
-  "id": "1",
-  "name": "Federico",
-  "lastName": "Gomez",
-  "email": "fedegomez@gmail.com",
-  "password": "123456",
+  "id": 1,
+  "name": "felipe",
+  "lastName": "nougues",
+  "email": "felipenougues1@gmail.com",
+  "password": "$2a$10$Z5TwAMyIp7d7h/kI1Eb9dOW1gafBIKnGogu624ZLQ/By7sNdXgqzK",
   "category": "hombres",
-  "image": "avatar.jpg"
- },
- {
-  "id": "2",
-  "name": "Claudia",
-  "lastName": "Martinez",
-  "email": "claudiamz@gmail.com",
-  "password": "hola1234",
-  "category": "mujeres",
-  "image": "avatar.jpg"
- },
- {
-  "id": "3",
-  "name": "Claudio",
-  "lastName": "Palacios",
-  "email": "claudiop@gmail.com",
-  "password": "hola1234567",
-  "category": "hombres",
-  "image": "avatar.jpg"
- },
- {
-  "id": "4",
-  "name": "Agustina",
-  "lastName": "Becaria",
-  "email": "agustinabecaria@gmail.com",
-  "password": "agustina123",
-  "category": "mujeres",
-  "image": "avatar.jpg"
+  "image": "image-1658535973290-426283622.jpg"
  }
 ]
