@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productsController = require("../controllers/productsController");
-const upload = require("../middlewares/multer");
+const upload = require("../middlewares/multerProducts");
 
 
 //*** GET SELECTED PRODUCTS ***//

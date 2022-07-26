@@ -5,21 +5,25 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <div class="cuadrante">
-            <form>
+            <form action="/users/login" method="post">
                 <br>
                 <br>
-                <input class="inputs-formulario" placeholder="Correo Electronico" type="text" name="correoElectronico">
+                <input class="inputs-formulario" placeholder="Correo Electronico" type="text" name="email">
                 <br>
                 <br>    
-                <input class="inputs-formulario" placeholder="Contraseña" type="password" name="contraseña">
-                <br>
+                <input class="inputs-formulario" placeholder="Contraseña" type="password" name="password">
+                <% if(locals.errors && errors.msg) { %>
+                    <div>
+                        <p style="color:red"><%= errors.msg %> </p>
+                    </div>
+                <% } %> 
                 <div class="form-group form-check">
                     <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
                     </label>
                 </div>
                 <br>
-                <input class="boton" class="send" type="submit" name="enviar">
+                <button type="submit" class="boton">Ingresar</button>
                 <br>
                 <br>
                 <label class="text"><a href="#">¿Olvidaste tu contraseña?</a></label>

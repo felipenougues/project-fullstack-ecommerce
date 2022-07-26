@@ -7,8 +7,8 @@ const usuarios = JSON.parse(fs.readFileSync(path.join(dbPath,'users','users.json
 const controller = {
     index: (req,res) => {
 
-        res.render('index', {productos: productos})
-        res.render('index', {usuarios: usuarios})
+        res.render('index', {productos: productos, usuarios:usuarios})
+
 
     },
       

@@ -1,13 +1,14 @@
 
 const { validationResult } = require('express-validator');
-const User = require("../../models/user.js");
+const User = require("../../models/User.js");
 const bcryptjs = require("bcryptjs");
 
 const controller = {
     register: (req,res) => res.render('users/register'),
+
     processRegister: (req, res) =>{
         const resultValidation = validationResult(req);
-        /*return res.send(resultValidation.mapped())*/
+
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {
                 errors: resultValidation.mapped(),
@@ -41,6 +42,7 @@ const controller = {
     },
 
     login: (req,res) => res.render('users/login'),
+
     loginProcess: (req,res) => {
         let userToLogin = User.findByField('email', req.body.email);
 		
@@ -54,17 +56,16 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/user/profile');
-			} 
-			return res.render('userLoginForm', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					}
-				}
-			});
+				return res.redirect('/users/profile');
+			}
         }
-    }
+		return res.render('users/login', {
+			errors: {msg: 'Las credenciales son inválidas'}
+			});
+    },
+	profile: (req,res) => {
+		return res.send("hi")
+	}
 }
 
 
