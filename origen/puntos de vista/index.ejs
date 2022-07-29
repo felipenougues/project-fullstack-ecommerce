@@ -21,10 +21,10 @@
                 <button>Descubre</button>
             </div>
         </section>
-        <h2>PROMOCIONES</h2>
+        <h2>EN PROMOCIÓN</h2>
         <section>
             
-            <% for(let i=0;i<productos.length; i++){ %>
+            <% for(let i=0;i<11; i++){ %>
                 <article>
                     <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
                     <h3><%= productos[i].name %></h3>
@@ -38,11 +38,24 @@
                     </div>
                 </article>
             <% } %>
-
+        </section>
+        <h2>OTROS PRODUCTOS</h2>
+        <section>
             
-
+            <% for(let i=11;i<productos.length; i++){ %>
+                <article>
+                    <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
+                    <h3><%= productos[i].name %></h3>
+                    <div class="anterior_sell">
+                        <p class="precio_ahora">
+                            USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
+                        </p>
+                    </div>
+                </article>
+            <% } %>
         </section>
     </main>
     <%- include('partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
 </body>
 </html>
+
