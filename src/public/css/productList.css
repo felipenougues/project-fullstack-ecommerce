@@ -6,11 +6,25 @@ main{
 section{
     width: 90%;
     margin: auto;
-    padding: 10px;
+    padding: 30px;
+    background-color: #F3e2d4;
     border: 1px solid gainsboro;
-    border-radius: 3px;
-    text-align: left;
 }
 .resume_item  {
     max-width: 100%;
+}
+.list_product{
+    border: 1px solid #F3e2d4;
+    display: flex;
+    border-radius: 10px;
+    background-color: azure;
+
+}
+.image_product{
+    width:20%;
+    height: 100%;
+    border-radius:10px;
+}
+h3{
+    text-align: center;
 }

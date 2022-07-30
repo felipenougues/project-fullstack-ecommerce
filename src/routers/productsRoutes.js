@@ -10,6 +10,7 @@ router.get("/productCart", productsController.productCart)
 //*** GET ALL PRODUCTS ***//
 router.get("/productList", productsController.productList)
 
+
 //*** GET ONE PRODUCT ***//
 router.get("/productDetail/:id", productsController.productDetail)
 
@@ -27,5 +28,7 @@ router.put("/productEdit/:id", productsController.productUpdate)
 //*** DELETE ONE PRODUCT ***//
 
 router.delete("/productDetail/:id", productsController.productDestroy)
+
+
 
 module.exports = router

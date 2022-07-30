@@ -11,8 +11,19 @@ const controller = {
     productCart: (req,res) => res.render('products/productCart'),
 
     productList: (req,res) => {
-        const productos = readJsonFile(dbPath)
-        res.render('products/productList', {productos: productos})
+		
+        /*const productos = readJsonFile(dbPath)
+        res.render('products/productList', {productos: productos})*/
+		let productosBuscados = []
+		let Busqueda = req.query.search
+		let productos = readJsonFile(dbPath)
+		for(i=0;i<productos.length;i++){
+			if(productos[i].name.toUpperCase().includes(Busqueda.toUpperCase())){
+				productosBuscados.push(productos[i])
+			}
+		}
+		res.render('products/productList', {productos: productosBuscados})
+		
     },  
 
     productDetail: (req,res) => {
