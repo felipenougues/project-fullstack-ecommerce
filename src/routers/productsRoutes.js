@@ -11,6 +11,7 @@ router.get("/productCart", productsController.productCart)
 router.get("/productList", productsController.productList)
 
 
+
 //*** GET ONE PRODUCT ***//
 router.get("/productDetail/:id", productsController.productDetail)
 

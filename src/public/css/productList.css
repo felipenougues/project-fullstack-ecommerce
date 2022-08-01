@@ -17,14 +17,23 @@ section{
     border: 1px solid #F3e2d4;
     display: flex;
     border-radius: 10px;
-    background-color: azure;
+    background-color: white;
 
 }
 .image_product{
+    margin: 20px;
     width:20%;
-    height: 100%;
     border-radius:10px;
-}
-h3{
     text-align: center;
+}
+form{
+    display: none
+}
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.product_description{
+    display: inline-block;
 }
