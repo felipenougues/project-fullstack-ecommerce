@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs',{title:"Somos Veffaly"}) %>         <!-- Inclusión de Head con EJS -->
+<%- include('partials/head.ejs',{title:"Somos Veffaly", stylesheets:["index.css"]}) %>         <!-- Inclusión de Head con EJS -->
 
 
 <body>
@@ -21,6 +21,7 @@
                 <button>Descubre</button>
             </div>
         </section>
+<<<<<<< HEAD
         <div class="carousel">
             <div class="carousel-inner">
                 <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
@@ -55,9 +56,12 @@
             </div>
         </div>
         <h2>PROMOCIONES</h2>
+=======
+        <h2>EN PROMOCIÓN</h2>
+>>>>>>> 7f1f0a04fd9c7e49e829481c4fa8f461f2fa0244
         <section>
             
-            <% for(let i=0;i<productos.length; i++){ %>
+            <% for(let i=0;i<11; i++){ %>
                 <article>
                     <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
                     <h3><%= productos[i].name %></h3>
@@ -71,11 +75,24 @@
                     </div>
                 </article>
             <% } %>
-
+        </section>
+        <h2>OTROS PRODUCTOS</h2>
+        <section>
             
-
+            <% for(let i=11;i<productos.length; i++){ %>
+                <article>
+                    <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
+                    <h3><%= productos[i].name %></h3>
+                    <div class="anterior_sell">
+                        <p class="precio_ahora">
+                            USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
+                        </p>
+                    </div>
+                </article>
+            <% } %>
         </section>
     </main>
     <%- include('partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
 </body>
 </html>
+
