@@ -6,23 +6,27 @@
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
     <main>
         <section>
-            
-            <% for(let i=0;i<productos.length; i++){ %>
-                <article>
-                    <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
-                    <h3><%= productos[i].name %></h3>
-                    <div class="anterior_sell">
-                        <p class="precio_ant">
-                            USD $<%= productos[i].price %>
-                        </p>
-                        <p class="precio_ahora">
-                            USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
-                        </p>
-                    </div>
-                </article>
-            <% } %>
-
-            
+            <ul>
+                <% for(let i=0;i<productos.length; i++){ %>
+                    <li class="list_product">
+                        <a href="/products/productDetail/<%= productos[i].id %>">
+                            <img class="image_product"src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>">
+                            <p class="product_description"><%= productos[i].description %></p>
+                        </a>
+                        <div class="anterior_sell">
+                            <h3><%= productos[i].name %></h3>
+                            <div>
+                                <p class="precio_ant">
+                                    USD $<%= productos[i].price %>
+                                </p>
+                                <p class="precio_ahora">
+                                    USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
 
         </section>
     </main>

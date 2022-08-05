@@ -282,31 +282,7 @@ header .nav-li {
     width: 180px;
 }
 
-.user__overlay {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    background-color: rgba(175, 151, 140, 0.9);
-    position: absolute;
-    right: -15px;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-.user__overlay li{
-    text-align: center;
-    padding: 10px;
-}
-.user__overlay li a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: block;
-}
 
-.user__overlay li a:hover {
-    background-color: rgba(141, 92, 59, 0.406);
-    color: orange;
-}
 
 /*--------------- User Overlay Setup ------------------*/
 
@@ -566,8 +542,19 @@ html, body {
 }
 
 @media(min-width: 461px) {
+    .user__overlay {
+        display: none;
+    }
+    .user__overlay li{
+        display: none;
+    }
+    .user__overlay li a {
+        display: none;
+    }
     
-
+    .user__overlay li a:hover {
+        display: none;
+    }
     main section {
         display: flex;
         justify-content: space-around;
@@ -604,5 +591,18 @@ html, body {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+    }
+    .user__overlay {
+        display: none;
+    }
+    .user__overlay li{
+        display: none;
+    }
+    .user__overlay li a {
+        display: none;
+    }
+    
+    .user__overlay li a:hover {
+        display: none;
     }
 }

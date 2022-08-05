@@ -27,10 +27,12 @@
 
         <div class="header__icons">
             <div class="Buscar">
-                <input type="text" placeholder=" Buscar">
-                <div class="btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <form action="products/productList" method="GET">
+                    <input type="text" placeholder=" Buscar" name="search">
+                    <div class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form>
             </div>
             <div class="Bolsa">
                 <i class="fa-solid fa-cart-shopping"></i>
