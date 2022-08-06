@@ -18,3 +18,6 @@ Las mayores complejidades las encontramos en la reutilización del código y la 
     3. Continuar haciendo: continuar dando estilos más avanzados a la página con CSS.
     4. Hacer menos: denominación de etiquetas, clases, etc., sin un formato o metodología unificada.
     5. Dejar de hacer: extensiones de código innecesarias
+    
+## 3° Iteración (Sprint)
+digamos que todo fue mas como una reorganizacion del propio proyecto ya que hubieron cambios en el orden de las carpetas el estilo aun no terminado del todo de las paginas de creacion y edicion, la implementacion de los partials tambien fue otra novedad, pero en resumen todo fue mas que nada reorganizacion.
