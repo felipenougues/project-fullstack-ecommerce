@@ -16,5 +16,14 @@
   "password": "$2a$10$JdGDYynoVqQJcRRiCkRm7.e4FvangHpnQcYNAXy4FgvQu/RKxTbhe",
   "category": "hombres",
   "image": "image-1658812049195-229706795.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Elian",
+  "lastName": "Velez",
+  "email": "elinarnyex@gmail.com",
+  "password": "$2a$10$sxgVtKy4.8FmydUQIHDFquPlzgeNwr93bwTg20nNF6m9DayenEr7K",
+  "category": "hombres",
+  "image": "image-1659809689673-288734050.jpg"
  }
 ]
