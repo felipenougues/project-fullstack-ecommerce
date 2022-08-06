@@ -65,67 +65,7 @@ body {
     border: none;
     color: var(--Text);
 }
-/*
-.Buscar input{
-    width: 0px;
-    height: 55px;
-    font-size: 15px;
-    color: black;
-    outline: none;
-    border: 1px solid var(--Body-Background);
-    border-radius: 30px;
-    transition: all 0.6s ease;
-}
 
-.btn{
-    position: absolute;
-    top: 0;
-    right: 130px;
-    background-color: var(--Text);
-    text-align: center;
-    width:55px;
-    height: 55px;
-    line-height: 55px;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.Buscar:hover input{
-    width:280px;
-    border-color: var(--Text);
-}
-.Buscar input:focus{
-    width:280px;
-    border: var(--Text);
-}
-
-.Bolsa{
-    background-color: var(--Text);
-    text-align: center;
-    width:55px;
-    height: 55px;
-    line-height: 55px;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.login{
-    background-color: var(--Text);
-    text-align: center;
-    width:55px;
-    height:55px;
-    line-height: 55px;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 90px;
-}
-*/
 .login ul{
     list-style: none;
 }
@@ -171,13 +111,12 @@ body {
 header {
     background-color: var(--Body-Background);
     text-align: center;
+    position: relative;
     padding: 6px 20px;
-    position: fixed;
-    top: 0;
     height: 70px;
     width: 100%;
-    z-index: 1;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.9);
+    margin-bottom: 2px;
 }
 
 
@@ -298,10 +237,7 @@ header .nav-li {
     width: 180px;
 }
 
-
-
-/*--------------- User Overlay Setup ------------------*/
-
+/*--------------- Banner ------------------*/
 
 .banner {
     position: relative;
@@ -343,9 +279,7 @@ li {
     list-style-type: none;
 }
 
-main {
-    margin-top: 70px;
-}
+
 
 main h2 {
     color: var(--Titles);
@@ -416,40 +350,126 @@ button {
     height: 50px;
 }
 
+
+/*--------------- Estilos del Footer ------------------*/
+
 footer {
-    background-color: black;
+    background-color: #262626;
     color: white;
     text-align: center;
-    padding: 20px;
 }
 
-footer i:hover {
-    cursor: pointer;
-    transform: scale(2);
-    color: orange;
-    transition: 0.5s;
+footer h6 {
+    font-size: 1.4rem;
+    margin: 20px 0;
 }
 
-.redes {
+.footer__newsletter{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: black;
+}
+.footer__newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+.footer__newsletter input{
+    border: 1px solid white;
+    background: #fff;
+    border-radius: 0;
+    height: 35px;
+    width: 70%;
+    max-width: 300px;
+    
+}
+
+.footer__newsletter input:focus{
+    border: 1px solid white;
+    outline: none;
+
+}
+
+.footer__newsletter button{
+    width: 30%;
+    max-width: 100px;
+    height: 35px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 0;
+}
+.newsletter-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.newsletter-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10px;
+}
+.footer__contact > *{
+    flex: 1;
+}
+
+.contact-container{
+    display: flex;
     justify-content: space-around;
 }
 
-.into_redes {
-    color: white;
+.social-media{
+    display: flex;
+    justify-content: space-around;
 }
-
-footer h3 {
-    margin: 18px 0 6px 0;
+  
+.social-media li{
+    background-color: #33353d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
-
-footer i {
+  
+.social-media li a{
+    color: #ccc;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all .4s ease;
+}
+  
+.social-media li a i {
     font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-footer .box-contacto {
-    margin-bottom: 2rem;
+.facebook:hover{
+    background-color:#3b5998
+}
+.twitter:hover{
+    background-color:#00aced
+}
+.youtube:hover{
+    background-color: #ff0000;
+}
+.instagram:hover{
+    background-color: #c13584;
+}
+.spotify:hover{
+    background-color: #1db954;
 }
 
 @media(min-width: 461px) {
@@ -495,11 +515,11 @@ footer .box-contacto {
     .user__overlay li a:hover {
         display: none;
     }
-    footer .box-contacto {
-        display: flex;
+    .footer__newsletter{
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
+    }
+    .newsletter-img,
+    .newsletter-details{
+        width: 50%;
     }
 }
