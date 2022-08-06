@@ -21,44 +21,7 @@
                 <button>Descubre</button>
             </div>
         </section>
-<<<<<<< HEAD
-        <div class="carousel">
-            <div class="carousel-inner">
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                <div class="carousel-item">
-                    <img src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without">
-                </div>
-                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript">
-                </div>
-                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel">
-                </div>
-                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-                <label for="carousel-2" class="carousel-control next control-1">›</label>
-                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                <label for="carousel-3" class="carousel-control next control-2">›</label>
-                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                <label for="carousel-1" class="carousel-control next control-3">›</label>
-                <ol class="carousel-indicators">
-                    <li>
-                        <label for="carousel-1" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-2" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-3" class="carousel-bullet">•</label>
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <h2>PROMOCIONES</h2>
-=======
         <h2>EN PROMOCIÓN</h2>
->>>>>>> 7f1f0a04fd9c7e49e829481c4fa8f461f2fa0244
         <section>
             
             <% for(let i=0;i<11; i++){ %>
@@ -66,11 +29,11 @@
                     <a href="/products/productDetail/<%= productos[i].id %>"><img src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>"></a>
                     <h3><%= productos[i].name %></h3>
                     <div class="anterior_sell">
-                        <p class="precio_ant">
-                            USD $<%= productos[i].price %>
-                        </p>
                         <p class="precio_ahora">
                             USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
+                        </p>
+                        <p class="discount">
+                            <%= productos[i].discount %> % OFF
                         </p>
                     </div>
                 </article>
