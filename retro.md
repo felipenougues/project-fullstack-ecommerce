@@ -21,5 +21,9 @@ Las mayores complejidades las encontramos en la reutilización del código y la 
     
 ## 3° Iteración (Sprint)
 digamos que todo fue mas como una reorganizacion del propio proyecto ya que hubieron cambios en el orden de las carpetas el estilo aun no terminado del todo de las paginas de creacion y edicion, la implementacion de los partials tambien fue otra novedad, pero en resumen todo fue mas que nada reorganizacion.
+
 ## 4° Iteración (Sprint)
 definitivamente un sprint exigente mas que nada por las funciones de rutas en lo que respecta al aprtado de productos, quizas lo de user.json y products.json no han sido tan complejos pero siempre han representado un trabajo constante
+
+## 5° Iteración (Sprint)
+este fue un sprint un poco más organizativo, y en el que tambien se implementaron ademas de las caracteristicas que exigia el propio sprint algunas funciones de diseño que creimos mas adecuadas
