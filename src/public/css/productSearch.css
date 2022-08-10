@@ -1,0 +1,39 @@
+
+main{
+    min-height: 100vh;
+}
+
+section{
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    background-color: #F3e2d4;
+    border: 1px solid gainsboro;
+}
+.resume_item  {
+    max-width: 100%;
+}
+.list_product{
+    border: 1px solid #F3e2d4;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.image_product{
+    margin: 20px;
+    width:20%;
+    border-radius:10px;
+    text-align: center;
+}
+form{
+    display: none
+}
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.product_description{
+    display: inline-block;
+}
