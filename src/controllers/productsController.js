@@ -12,8 +12,12 @@ const controller = {
 
     productList: (req,res) => {
 		
-        /*const productos = readJsonFile(dbPath)
-        res.render('products/productList', {productos: productos})*/
+        const productos = readJsonFile(dbPath)
+        res.render('products/productList', {productos: productos})
+		
+    },
+	
+	productSearch: (req, res)=>{
 		let productosBuscados = []
 		let Busqueda = req.query.search
 		let productos = readJsonFile(dbPath)
@@ -22,9 +26,8 @@ const controller = {
 				productosBuscados.push(productos[i])
 			}
 		}
-		res.render('products/productList', {productos: productosBuscados})
-		
-    },  
+		res.render('products/productSearch', {productos: productosBuscados})
+	},
 
     productDetail: (req,res) => {
         const productos = readJsonFile(dbPath)

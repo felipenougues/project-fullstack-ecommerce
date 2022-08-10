@@ -9,11 +9,12 @@ router.get("/productCart", productsController.productCart)
 
 //*** GET ALL PRODUCTS ***//
 router.get("/productList", productsController.productList)
-
+router.get("/productSearch", productsController.productSearch)
 
 
 //*** GET ONE PRODUCT ***//
 router.get("/productDetail/:id", productsController.productDetail)
+
 
 
 //*** CREATE ONE PRODUCT ***//
