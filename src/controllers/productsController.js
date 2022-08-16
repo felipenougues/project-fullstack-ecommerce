@@ -2,6 +2,9 @@ const path = require('path')
 const fs = require('fs');
 const dbPath = path.join(__dirname,'../database/products/products.json')
 
+const db = require('../database/models')
+
+
 
 const readJsonFile = (path) =>{
 	return JSON.parse(fs.readFileSync(path, 'utf-8'));
@@ -11,9 +14,12 @@ const controller = {
     productCart: (req,res) => res.render('products/productCart'),
 
     productList: (req,res) => {
-		
-        const productos = readJsonFile(dbPath)
-        res.render('products/productList', {productos: productos})
+		db.Product.findAll()
+		.then(products => {
+			return res.json(products)
+		})
+        /* const productos = readJsonFile(dbPath)
+        res.render('products/productList', {productos: productos}) */
 		
     },
 	

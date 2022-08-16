@@ -3,6 +3,8 @@ const { validationResult } = require('express-validator');
 const User = require("../../models/User.js");
 const bcryptjs = require("bcryptjs");
 
+const db = require('../database/models')
+
 const controller = {
     register: (req,res) => res.render('users/register'),
 
@@ -64,7 +66,8 @@ const controller = {
 			});
     },
 	profile: (req,res) => {
-		return res.send("hi")
+		db.User.findAll()
+		.then(users => {return res.json(users)})
 	}
 }
 
