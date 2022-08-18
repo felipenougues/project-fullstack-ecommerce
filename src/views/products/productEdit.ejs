@@ -7,11 +7,7 @@
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
 
 	<div class="caja-formulario">
-		<div >
-			<div>
-				<h2>Editando: <i><%= product.nombre  %></i></h2>
-			</div>
-		</div>
+			<h2>Editando: <i><%= product.nombre  %></i></h2>
 		<div >
 			<form action="/products/productEdit/<%= product.id %>?_method=PUT" method="post">
 				<div  class="caja-formulario">

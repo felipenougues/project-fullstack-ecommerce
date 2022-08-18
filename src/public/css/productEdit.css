@@ -11,15 +11,8 @@
 * {
     font-family: 'Gill Sans MT';
 }
-
-header {
-    background: var(--Body-Background);
+.caja-formulario{
     text-align: center;
-    padding: 0px 3px;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    border-bottom: 1px solid black;
 }
 
 .banner{
