@@ -16,8 +16,10 @@ const controller = {
     productList: (req,res) => {
 		db.Product.findAll()
 		.then(products => {
-			return res.json(products)
+			//return res.json(products)
+			res.render('products/productList', {productos: products})
 		})
+
         /* const productos = readJsonFile(dbPath)
         res.render('products/productList', {productos: productos}) */
 		
@@ -43,11 +45,21 @@ const controller = {
 
     // CREATE
     productCreate: (req,res) => {
-        
-        return res.render("products/productCreate");
-        
+        res.render("products/productCreate");
     },
-    productStore: (req, res) => {
+	productStore: (req, res) =>{
+		db.Product.create({
+			name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            size: req.body.size,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: req.file?.filename || "banner1.jpg"
+		})
+		res.redirect("/products/productList")
+	},
+    /*productStore: (req, res) => {
 		const productos = readJsonFile(dbPath)
 		const producto = {
 			id: productos[productos.length -1].id + 1,
@@ -64,7 +76,7 @@ const controller = {
 		fs.writeFileSync(dbPath, JSON.stringify(productos, null, 2));
 		return res.redirect("/products/productList")
 		
-	},
+	},*/
 
     // EDIT
 	productEdit: (req, res) => {
@@ -104,7 +116,5 @@ const controller = {
 		
 	}
 };
-
-
 
 module.exports = controller
