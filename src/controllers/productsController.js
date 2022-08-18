@@ -16,33 +16,27 @@ const controller = {
     productList: (req,res) => {
 		db.Product.findAll()
 		.then(products => {
-			//return res.json(products)
 			res.render('products/productList', {productos: products})
-		})
-
-        /* const productos = readJsonFile(dbPath)
-        res.render('products/productList', {productos: productos}) */
-		
+		})	
     },
 	
 	productSearch: (req, res)=>{
-		let productosBuscados = []
-		let Busqueda = req.query.search
-		let productos = readJsonFile(dbPath)
-		for(i=0;i<productos.length;i++){
-			if(productos[i].name.toUpperCase().includes(Busqueda.toUpperCase())){
-				productosBuscados.push(productos[i])
+		db.Product.findAll({
+			where:{
+				name: {[db.Sequelize.Op.like]:"%"+req.query.search+"%"}
 			}
-		}
-		res.render('products/productSearch', {productos: productosBuscados})
+		})
+		.then(products => {
+			res.render('products/productSearch', {productos: products})
+		})
 	},
 
-    productDetail: (req,res) => {
-        const productos = readJsonFile(dbPath)
-        const productoDetallado = productos.find((producto) => producto.id == req.params.id);
-        res.render('products/productDetail', {producto: productoDetallado})
+	productDetail: (req,res) => {
+        db.Product.findByPk(req.params.id)
+		.then(function(productoDetallado){
+			res.render('products/productDetail', {producto: productoDetallado})
+		})
     },
-
     // CREATE
     productCreate: (req,res) => {
         res.render("products/productCreate");
@@ -59,25 +53,7 @@ const controller = {
 		})
 		res.redirect("/products/productList")
 	},
-    /*productStore: (req, res) => {
-		const productos = readJsonFile(dbPath)
-		const producto = {
-			id: productos[productos.length -1].id + 1,
-			name: req.body.name,
-            description: req.body.description,
-            category: req.body.category,
-            size: req.body.size,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file?.filename || "banner1.jpg"
-		}
-
-		productos.push(producto);
-		fs.writeFileSync(dbPath, JSON.stringify(productos, null, 2));
-		return res.redirect("/products/productList")
-		
-	},*/
-
+    
     // EDIT
 	productEdit: (req, res) => {
 		const productos = readJsonFile(dbPath)
@@ -116,5 +92,53 @@ const controller = {
 		
 	}
 };
-
 module.exports = controller
+//IDEAS DE PROYECTOS ANTERIORES//
+/* 
+    productList: (req,res) => {
+		db.Product.findAll()
+		.then(products => {
+			//return res.json(products)
+		})
+
+        /* const productos = readJsonFile(dbPath)
+        res.render('products/productList', {productos: productos}) 
+		
+    },
+	productStore: (req, res) => {
+		const productos = readJsonFile(dbPath)
+		const producto = {
+			id: productos[productos.length -1].id + 1,
+			name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            size: req.body.size,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: req.file?.filename || "banner1.jpg"
+		}
+		productos.push(producto);
+		fs.writeFileSync(dbPath, JSON.stringify(productos, null, 2));
+		return res.redirect("/products/productList")
+		
+	},
+	productSearch: (req, res)=>{
+		let productosBuscados = []
+		let Busqueda = req.query.search
+		let productos = readJsonFile(dbPath)
+		for(i=0;i<productos.length;i++){
+			if(productos[i].name.toUpperCase().includes(Busqueda.toUpperCase())){
+				productosBuscados.push(productos[i])
+			}
+		}
+		res.render('products/productSearch', {productos: productosBuscados})
+	},
+	productDetail: (req,res) => {
+        const productos = readJsonFile(dbPath)
+        const productoDetallado = productos.find((producto) => producto.id == req.params.id);
+        res.render('products/productDetail', {producto: productoDetallado})
+    },*/
+
+
+
+	
