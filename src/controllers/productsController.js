@@ -69,7 +69,7 @@ const controller = {
 		db.Product.update({
 			name: req.body.name,
             description: req.body.description,
-            category: req.body.category,
+            category_id: req.body.category,
             size: req.body.size,
 			price: req.body.price,
 			discount: req.body.discount,
