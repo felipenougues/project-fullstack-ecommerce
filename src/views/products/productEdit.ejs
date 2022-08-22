@@ -13,22 +13,26 @@
 				<div  class="caja-formulario">
 					<div >
 						<label class="align-formulario" for="name" >Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Vestido Retazeado" class="inputs-formulario" value="<%= product.name  %>">
+						<input type="text" id="name" name="name" placeholder="Ej: Vestido Retazeado" class="inputs-formulario" value="<%= product.name  %>" required>
 					</div>
 					<div >
 						<label class="align-formulario" for="price" >Precio del producto:</label>
-						<input type="text" id="price" name="price" placeholder="Ej: 120" class="inputs-formulario" value="<%= product.price  %>">
+						<input type="text" id="price" name="price" placeholder="Ej: 120" class="inputs-formulario" value="<%= product.price  %>" required>
 					</div>
 					<div >
 						<label class="align-formulario" for="discount" >Descuento:</label>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="inputs-formulario" value="<%= product.discount  %>">
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="inputs-formulario" value="<%= product.discount  %>" required>
 					</div>
                     <div>
 						<label for="category" class="align-formulario">Categoría:</label>
-						<select name="category" id="category" class="inputs-formulario">
-							<option value="">Elegí</option>
-							<option value="abrigos" <%= product.category == "abrigos" ? "selected" : null %> >Abrigos</option>
-							<option value="vestidos" <%= product.category == "vestidos" ? "selected" : null %> >Vestidos</option>
+						<select name="category" id="category" class="inputs-formulario" required>
+							<option value="1">Elegí</option>
+							<option value="1" <%= product.category == "1" ? "selected" : null %> >Vestidos</option>
+							<option value="2" <%= product.category == "2" ? "selected" : null %> >Abrigos</option>
+							<option value="3" <%= product.category == "3" ? "selected" : null %> >pantalon_dama</option>
+							<option value="4" <%= product.category == "4" ? "selected" : null %> >pantalon_hombre</option>
+							<option value="5" <%= product.category == "5" ? "selected" : null %> >camisa</option>
+							<option value="6" <%= product.category == "6" ? "selected" : null %> >otro</option>
 						</select>
 					</div>
 					
