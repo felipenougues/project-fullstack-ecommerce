@@ -38,11 +38,18 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const config = {
+        
     }
 
     const Product = sequelize.define(alias,cols,config);
 
-    // Acá incluir asociaciones de ser necesario (Product.associate...)
+    Product.assosiate = function(modelos){
+        Product.belongsTo(modelos.Category,{
+            as: "P_category",
+            foreingKey: category_id
+        })
+    }
+   
 
     return Product;
 }
