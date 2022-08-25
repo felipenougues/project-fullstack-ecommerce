@@ -66,9 +66,6 @@ body {
     color: var(--Text);
 }
 
-.login ul{
-    list-style: none;
-}
 .nav li a{
     text-decoration: none;
 
@@ -223,18 +220,35 @@ header .nav-li {
 
 
 /*--------------- User Overlay Setup ------------------*/
-
-.user__overlay {
+.hidden{
     display: none;
 }
 
-#user__toggle {
-    display: none;
+.user__overlay{
+    border: 1px solid var(--Text);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    z-index: 10;
+    background-color: var(--Body-Background);
 }
 
-#user__toggle:checked~.user__overlay {
-    height: 40vh;
-    width: 180px;
+.user__select li{
+    border: 1px solid var(--Text);
+    background-color: var(--Body-Background);
+}
+
+.user__select li:hover{
+    opacity: 0.5;
+}
+.user__select li a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--Text);
+    padding: 15px 0;
 }
 
 /*--------------- Banner ------------------*/
@@ -476,17 +490,6 @@ footer h6 {
 
 @media(min-width: 461px) {
 
-    .user__overlay li{
-        display: none;
-    }
-    .user__overlay li a {
-        display: none;
-    }
-    
-    .user__overlay li a:hover {
-        display: none;
-    }
-
 
 }
 
@@ -504,19 +507,7 @@ footer h6 {
         display: inline-block;
     }
 
-    .user__overlay {
-        display: none;
-    }
-    .user__overlay li{
-        display: none;
-    }
-    .user__overlay li a {
-        display: none;
-    }
-    
-    .user__overlay li a:hover {
-        display: none;
-    }
+
     .footer__newsletter{
         flex-direction: row;
     }
