@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
+            allowNull: true
         },
         name: {
             type: DataTypes.STRING,
@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        category: {
+        category_id: {
             type: DataTypes.STRING,
         },
         size: {
@@ -38,11 +38,18 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const config = {
+        
     }
 
     const Product = sequelize.define(alias,cols,config);
 
-    // Acá incluir asociaciones de ser necesario (Product.associate...)
+    Product.assosiate = function(modelos){
+        Product.belongsTo(modelos.Category,{
+            as: "P_category",
+            foreignKey: category_id
+        })
+    }
+   
 
     return Product;
 }

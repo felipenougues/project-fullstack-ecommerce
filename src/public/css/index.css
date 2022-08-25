@@ -31,7 +31,7 @@ body {
 }
 .slider img{
     height: 400px;
-    width:  93vw;
+    width:  84vw;
     object-fit: cover;
 }
 @keyframes cambio {

@@ -20,6 +20,7 @@ router.get("/productDetail/:id", productsController.productDetail)
 //*** CREATE ONE PRODUCT ***//
 
 router.get("/productCreate", productsController.productCreate)
+//router.post("/productCreate", productsController.create)
 router.post("/productCreate", upload.single("productImage"), productsController.productStore) //agrego multer a esta route
 
 //*** EDIT ONE PRODUCT ***//

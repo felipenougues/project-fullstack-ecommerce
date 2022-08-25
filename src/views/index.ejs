@@ -48,7 +48,10 @@
                     <h3><%= productos[i].name %></h3>
                     <div class="anterior_sell">
                         <p class="precio_ahora">
-                            USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
+                            USD $<%= (productos[i].price) %>
+                        </p>
+                        <p>
+                            TALLA <%= productos[i].size %>
                         </p>
                     </div>
                 </article>
@@ -58,4 +61,3 @@
     <%- include('partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
 </body>
 </html>
-
