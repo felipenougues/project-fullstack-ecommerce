@@ -147,11 +147,16 @@ header {
     transition: all 0.3s ease;
 }
 
+header .nav-li {
+    padding: 15px 0;
+    font-size: 1rem;
+    border: 1px solid white;
+}
 .header__overlay li a {
+    display: inline-block;
+    width: 100%;
     color: white;
     text-decoration: none;
-    align-items: left;
-    padding-left: 1.5rem;
 }
 
 .header__overlay li a:hover {
@@ -159,13 +164,6 @@ header {
     transform: scale(2);
     color: orange;
     transition: 0.5s;
-}
-header .nav-li {
-    margin-top: 1rem;
-    line-height: 2rem;
-    padding: 1.4rem;
-    padding-bottom: 1rem;
-    font-size: 1rem;
 }
 
 .header__nav--desktop{
@@ -226,18 +224,18 @@ header .nav-li {
 
 .user__overlay{
     border: 1px solid var(--Text);
-    width: 200px;
+    width: 160px;
     height: 200px;
     position: absolute;
     right: 0;
-    top: 70px;
+    top: 45px;
     z-index: 10;
-    background-color: var(--Body-Background);
+    background-color: rgba(175, 151, 140, 0.9);
 }
 
 .user__select li{
-    border: 1px solid var(--Text);
-    background-color: var(--Body-Background);
+    border: 1px solid white;
+    background-color: rgba(175, 151, 140, 0.9);
 }
 
 .user__select li:hover{
@@ -247,7 +245,7 @@ header .nav-li {
     display: inline-block;
     width: 100%;
     text-decoration: none;
-    color: var(--Text);
+    color: white;
     padding: 15px 0;
 }
 
@@ -430,6 +428,7 @@ footer h6 {
 
 .footer__contact{
     display: flex;
+    flex-flow: column;
     justify-content: space-between;
     padding: 40px 10px;
 }
@@ -489,7 +488,9 @@ footer h6 {
 }
 
 @media(min-width: 461px) {
-
+    .footer__contact{
+        flex-flow: row;
+    }
 
 }
 
