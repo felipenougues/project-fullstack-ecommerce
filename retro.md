@@ -27,3 +27,6 @@ definitivamente un sprint exigente mas que nada por las funciones de rutas en lo
 
 ## 5° Iteración (Sprint)
 este fue un sprint un poco más organizativo, y en el que tambien se implementaron ademas de las caracteristicas que exigia el propio sprint algunas funciones de diseño que creimos mas adecuadas
+
+## 6° Iteración (Sprint)
+Definitivamente un trabajo un poco complejo tocó adaptar y reemplazar varias de las rutas a bases de datos, en general fue de paciencia crear las bases de datos y arraglar en el camino los errores tambien hicimos unos cambios de diseño pequeños pero prácticos
