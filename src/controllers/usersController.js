@@ -1,6 +1,6 @@
 
 const { validationResult } = require('express-validator');
-const User = require("../../models/User.js");
+//const User = require("../../models/User.js");
 const bcryptjs = require("bcryptjs");
 
 const db = require('../database/models')
@@ -8,6 +8,39 @@ const db = require('../database/models')
 const controller = {
     register: (req,res) => res.render('users/register'),
 
+    processRegister: (req, res) =>{
+
+		db.User.create({
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			Image: req.file.filename,
+		})
+		return res.redirect('/users/login')
+    },
+
+    login: (req,res) => res.render('users/login'),
+
+    loginProcess: (req,res) => {
+        db.User.findOne({
+			where:{
+				email: req.body.email
+			}
+		})
+		.then((resultado)=>{
+			if(resultado) {
+				let isOkThePassword = bcryptjs.compareSync(req.body.password, req.body.password);
+			}
+		});
+		res.redirect("/users/profile")
+    },
+	profile: (req,res) => {
+		db.User.findAll()
+		.then(users => {return res.json(users)})
+	}
+}
+
+module.exports = controller;
+/*
     processRegister: (req, res) =>{
         const resultValidation = validationResult(req);
 
@@ -42,10 +75,7 @@ const controller = {
 
         return res.redirect('/users/login')
     },
-
-    login: (req,res) => res.render('users/login'),
-
-    loginProcess: (req,res) => {
+	loginProcess: (req,res) => {
         let userToLogin = User.findByField('email', req.body.email);
 		
 		if(userToLogin) {
@@ -64,12 +94,4 @@ const controller = {
 		return res.render('users/login', {
 			errors: {msg: 'Las credenciales son inválidas'}
 			});
-    },
-	profile: (req,res) => {
-		db.User.findAll()
-		.then(users => {return res.json(users)})
-	}
-}
-
-
-module.exports = controller;
+    }*/
