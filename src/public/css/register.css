@@ -142,6 +142,7 @@ main a {
 }
 
 main .mayusculas {
+    margin: 50px;
     font-weight: 50;
     color: antiquewhite;
     display: flex;
