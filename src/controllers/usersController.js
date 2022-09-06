@@ -46,18 +46,28 @@ const controller = {
 
     login: (req,res) => res.render('users/login'),
 
-    loginProcess: (req,res) => {
-        db.User.findOne({
-			where:{
-				email: req.body.email
-			}
-		})
+	loginProcess: (req,res) => {
+		db.User.findOne({where:{
+			email: req.body.email
+		}})
 		.then((resultado)=>{
 			if(resultado) {
-				let isOkThePassword = bcryptjs.compareSync(req.body.password, req.body.password);
+				let isOkThePassword = bcryptjs.compareSync(req.body.password, resultado.password);
+				if (isOkThePassword) {
+					delete resultado.password;
+					req.session.userLogged = resultado;
+	
+					if(req.body.remember_user) {
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					}
+	
+					return res.redirect('/users/profile');
+				}
 			}
-		});
-		res.redirect("/users/profile")
+			return res.render('users/login', {
+				errors: {msg: 'Las credenciales son inválidas'}
+				});
+		})
     },
 	profile: (req,res) => {
 		db.User.findAll()
