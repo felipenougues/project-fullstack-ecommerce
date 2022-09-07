@@ -6,12 +6,10 @@
     <main>
         <div class="cuadrante">
             <form action="/users/login" method="post">
-                <br>
-                <br>
-                <input class="inputs-formulario" placeholder="Correo Electronico" type="text" name="email">
-                <br>
-                <br>    
-                <input class="inputs-formulario" placeholder="Contraseña" type="password" name="password">
+                <input class="inputs-formulario email" placeholder="Correo Electronico" type="text" name="email">
+                <p class="error-msg"></p>
+                <input class="inputs-formulario password" placeholder="Contraseña" type="password" name="password">
+                <p class="error-msg"></p>
                 <% if(locals.errors && errors.msg) { %>
                     <div>
                         <p style="color:red"><%= errors.msg %> </p>
@@ -22,17 +20,14 @@
                         <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
                     </label>
                 </div>
-                <br>
                 <button type="submit" class="boton">Ingresar</button>
-                <br>
-                <br>
                 <label class="text"><a href="#">¿Olvidaste tu contraseña?</a></label>
-                <br>
-                <br>
             </form>
         </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>
