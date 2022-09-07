@@ -105,6 +105,20 @@ body {
 
 /* -------------- */
 
+/* Utility Classes */
+
+.error-msg{
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.alert-error {
+    color: red;
+    border: 1px solid red;
+}
+
+/* Header Setup*/
+
 header {
     background-color: var(--Body-Background);
     text-align: center;

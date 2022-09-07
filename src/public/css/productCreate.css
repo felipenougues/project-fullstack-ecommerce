@@ -1,93 +1,26 @@
-:root {
-    --azulOscuro: #00304E;
-    --rosaClaro: #e1e1e1;
-    --Header-Background: ;
-    --Body-Background: #f4eeeb;
-    --Text-Background: rgba(175, 151, 140, 0.8);
-    --Text: #af978c;
 
-}
 .text-danger{
     color: red;
 }
-* {
-    font-family: 'Gill Sans MT';
-}
+
 .caja-formulario{
     text-align: center;
 }
 
-.banner{
-    position: relative;
-    text-align: center;
-}
-.banner img{
-    width: 100%;
-    max-height: 900px;
-    object-fit: cover;
-    display: block;
-}
 
-.into_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#burger__toggle{
-    display: none;
-}
-#burger__toggle:checked ~ .header__overlay{
-    height: 350px;
-}
-.burger{
-    font-size: 20px;
-}
-.header__overlay{
-    width: 60%;
-    height: 0px;
-    overflow: hidden;
-    background-color: #02173F;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
 main{
     padding: 20px;
     
 }
 
-main h2{
-    color: white ;
-    background-color: var(--Text-Background);
-    text-align: center;
+h2{
+    margin: 30px;
+    font-size: 1.8rem;
 }
-
-.logo {
-    width: 100%;
-    max-width: 100px;
-    
-}
-.header__icons i{
-    font-size: 18px;
-    margin-left: 8px;
-}
-
-.header__searchbar{
-    display: none;
-}
-
 
 li {
     list-style-type: none;
 }
-
-
-.caja-formulario{
-    margin-top: 80px;
-}
-
 
 .inputs-formulario {
     padding: 1rem;
@@ -128,8 +61,10 @@ li {
 }
 
 .align-formulario{
+    display: inline-block;
     text-align: center;
-    margin-left: 15px;
+    font-size: 1.2rem;
+    margin: 10px;
 }
 
 main a {
@@ -137,26 +72,3 @@ main a {
 }
 
 
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.redes{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.into_redes{
-    color: white;
-}
-
-footer h3{
-    margin: 18px 0 6px 0;
-}
-
-footer i{
-    font-size: 20px;
-}

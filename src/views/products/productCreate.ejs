@@ -14,6 +14,7 @@
 					<div >
 						<label class="align-formulario" for="name" >Nombre del producto:</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Vestido Retazeado" class="inputs-formulario">
+						<p class="error-msg"></p>
 						<% if (locals.errors && errors.name) { %>
 							<div class="text-danger">
 								<%= errors.name.msg %> 
@@ -23,6 +24,7 @@
 					<div >
 						<label class="align-formulario" for="price" >Precio del producto:</label>
 						<input type="text" id="price" name="price" placeholder="Ej: 120" class="inputs-formulario">
+						<p class="error-msg"></p>
 						<% if (locals.errors && errors.price) { %>
 							<div class="text-danger">
 								<%= errors.price.msg %> 
@@ -41,29 +43,32 @@
 					<div>
 						<label for="category" class="align-formulario">Categoría:</label>
 						<select name="category" id="category" class="inputs-formulario">
-							<option value="1">Elegí</option>
+							<option value="1">Seleccionar</option>
 							<option value="1">Vestidos</option>
 							<option value="2">Abrigos</option>
-							<option value="3">pantalon_dama</option>
-							<option value="4">pantalon_hombre</option>
-							<option value="5">camisa</option>
-							<option value="6">otro</option>
+							<option value="3">Pantalon Dama</option>
+							<option value="4">Pantalon Hombre</option>
+							<option value="5">Camisa</option>
+							<option value="6">Otro</option>
 						</select>
+						<p class="error-msg"></p>
 					</div>
 					<div>
 						<label for="size" class="align-formulario">Talle:</label>
 						<select name="size" id="size" class="inputs-formulario">
-							<option value="S">Elegí</option>
+							<option value="S">Seleccionar</option>
 							<option value="S">S</option>
 							<option value="M">M</option>
 							<option value="L">L</option>
 							<option value="XL">XL</option>
 						</select>
+						<p class="error-msg"></p>
 					</div>
 					
 					<div>
-						<label class="align-formulario" for="description" >Descipción:</label>
+						<label class="align-formulario" for="description" >Descripción:</label>
 						<textarea name="description" id="description" class="inputs-formulario"></textarea>
+						<p class="error-msg"></p>
 						<% if (locals.errors && errors.description) { %>
 							<div class="text-danger">
 								<%= errors.description.msg %> 
@@ -73,6 +78,7 @@
 					<div>
 						<label  class="align-formulario" for="productImage">Imagen de producto: </label>
 						<input type="file" id="productImage" name="productImage" class="inputs-formulario">
+						<p class="error-msg"></p>
 						<% if (locals.errors && errors.productImage) { %>
 							<div class="text-danger">
 								<%= errors.productImage.msg %> 
@@ -90,5 +96,6 @@
 	<!-- /todos los productos -->
 
 	<%- include('../partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
+	<script src="/js/productCreate.js"></script>
 </body>	
 </html>
