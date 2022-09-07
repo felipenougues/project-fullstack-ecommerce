@@ -30,7 +30,6 @@ const validations = [
 	
 	
 ]
-
 //Formulario de Registro
 router.get("/register", usersController.register);
 //Procesar el Registro
