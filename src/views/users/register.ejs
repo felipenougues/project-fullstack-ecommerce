@@ -8,10 +8,11 @@
          
         <form action="/users/register"  method="post" enctype="multipart/form-data">
             <div class="caja-formulario">
-                <div >
-                    <label class="mayusculas" for="name" >Nombre </label>
+                <div>
+                    <label for="name">Nombre </label>
                     <input type="text" id="name" name="name" placeholder="Nombre" class="inputs-formulario"
                     value="<%= locals.oldData ? oldData.name : null %>">
+                    <p class="error-msg"></p>
                     <% if (locals.errors && errors.name) { %>
                         <div class="text-danger">
                             <%= errors.name.msg %> 
@@ -19,9 +20,10 @@
                     <% } %>
                 </div>
                 <div >
-                    <label class="mayusculas" for="lastName" >Apellido </label>
+                    <label for="lastName">Apellido </label>
                     <input type="text" id="lastName" name="lastName" placeholder="Apellido" class="inputs-formulario"
                     value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <p class="error-msg"></p>
                     <% if (locals.errors && errors.lastName) { %>
                         <div class="text-danger">
                             <%= errors.lastName.msg %> 
@@ -29,8 +31,9 @@
                     <% } %>
                 </div>
                 <div >
-                    <label class="mayusculas" for="email" >E-mail </label>
-                    <input type="text" id="email" name="email" placeholder="E-mail" class="inputs-formulario" value="<%= locals.oldData && oldData.email ? oldData.email : null %>"> 
+                    <label for="email" >E-mail </label>
+                    <input type="text" id="email" name="email" placeholder="E-mail" class="inputs-formulario" value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                    <p class="error-msg"></p> 
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %> 
@@ -38,8 +41,9 @@
                     <% } %>
                 </div>
                 <div >
-                    <label class="mayusculas" for="password" >Password </label>
+                    <label for="password">Contraseña </label>
                     <input type="password" id="password" name="password" placeholder="Password" class="inputs-formulario">
+                    <p class="error-msg"></p>
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
                             <%= errors.password.msg %> 
@@ -48,11 +52,12 @@
                 </div>
                 
                 <div>
-                    <label for="category" class="mayusculas">CATEGORIA</label>
+                    <label for="category">Categoria</label>
                     <select name="category" id="category" class="inputs-formulario">
-                        <option value="hombres">HOMBRES</option>
-                        <option value="mujeres">MUJERES</option>
+                        <option value="hombres">Hombres</option>
+                        <option value="mujeres">Mujeres</option>
                     </select>
+                    <p class="error-msg"></p>
                     <% if (locals.errors && errors.category) { %>
                         <div class="text-danger">
                             <%= errors.category.msg %> 
@@ -62,8 +67,9 @@
             
 
                 <div>
-						<label  class="mayusculas" for="image">Imagen de Perfil</label>
+						<label for="image">Imagen de Perfil</label>
 						<input type="file" id="image" name="image" class="inputs-formulario">
+                        <p class="error-msg"></p>
                         <% if (locals.errors && errors.image) { %>
                             <div class="text-danger">
                                 <%= errors.image.msg %> 
@@ -78,6 +84,8 @@
         </form>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/register.js"></script>
 </body>
 
 </html>
