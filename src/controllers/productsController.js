@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const dbPath = path.join(__dirname,'../database/products/products.json')
-
+const { validationResult } = require('express-validator');
 const db = require('../database/models')
 
 
@@ -42,16 +42,25 @@ const controller = {
         res.render("products/productCreate");
     },
 	productStore: (req, res) =>{
-		db.Product.create({
-			name: req.body.name,
-            description: req.body.description,
-            category_id: req.body.category,
-            size: req.body.size,
-			price: req.body.price,
-			discount: req.body.discount,
-			image: req.file?.filename || "banner1.jpg"
-		})
-		res.redirect("/products/productList")
+		const resultValidation = validationResult(req);
+		if(resultValidation.errors.length > 0){
+			return res.render('products/productCreate', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+		else{
+			db.Product.create({
+				name: req.body.name,
+				description: req.body.description,
+				category_id: req.body.category,
+				size: req.body.size,
+				price: req.body.price,
+				discount: req.body.discount,
+				image: req.file?.filename || "banner1.jpg"
+			})
+			res.redirect("/products/productList")
+		}
 	},
     
     // EDIT
