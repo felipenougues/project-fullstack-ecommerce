@@ -49,7 +49,7 @@ router.post("/productCreate", upload.single("productImage"), validationsProducts
 //*** EDIT ONE PRODUCT ***//
 
 router.get("/productEdit/:id", productsController.productEdit)
-router.put("/productEdit/:id", validationsProducts, productsController.productUpdate)
+router.put("/productEdit/:id", productsController.productUpdate)
 
 //*** DELETE ONE PRODUCT ***//
 
