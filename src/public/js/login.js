@@ -1,5 +1,10 @@
 const inputEmail = document.querySelector('.email')
 const inputPassword = document.querySelector('.password')
+const submitButton = document.querySelector('.boton')
+const requiredFields = [inputEmail, inputPassword]
+const errors = document.querySelectorAll('.error-msg')
+
+inputEmail.focus()
 
 inputEmail.addEventListener('blur', function(e){
     if(e.target.value == ""){
@@ -28,3 +33,16 @@ inputPassword.addEventListener('blur', function(e){
 })
 
 
+
+submitButton.addEventListener('click', function(e){
+    requiredFields.forEach(field => {
+        if(field.value == ""){
+            e.preventDefault();
+        }
+    })
+    errors.forEach(error => {
+        if(error.innerHTML !== ""){
+            e.preventDefault();
+        }
+    })
+})

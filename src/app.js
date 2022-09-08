@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3030;
+const apiProductsRoutes = require('./routers/api/apiProductsRoutes')
+const apiUsersRoutes = require('./routers/api/apiUsersRoutes')
 const mainRoutes = require('./routers/mainRoutes');
 const productsRoutes = require('./routers/productsRoutes');
 const usersRoutes = require("./routers/usersRoutes")
@@ -23,6 +25,8 @@ app.use(session({
 }));
 app.use(cookies());
 
+app.use("/api/products", apiProductsRoutes)
+app.use("/api/users", apiUsersRoutes)
 app.use("/users", usersRoutes)
 app.use("/products",productsRoutes);
 app.use("/", mainRoutes);
