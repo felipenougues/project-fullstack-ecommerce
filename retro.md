@@ -30,3 +30,6 @@ este fue un sprint un poco más organizativo, y en el que tambien se implementar
 
 ## 6° Iteración (Sprint)
 Definitivamente un trabajo un poco complejo tocó adaptar y reemplazar varias de las rutas a bases de datos, en general fue de paciencia crear las bases de datos y arraglar en el camino los errores tambien hicimos unos cambios de diseño pequeños pero prácticos
+
+## 7° Iteración (Sprint)
+Un trabajo metodico, nosotros tuvimos que hacer las validaciones correspondientes tanto de front como de back-end siendo asi algo de paciencia y ensayos pero al final salio bastante bien 
