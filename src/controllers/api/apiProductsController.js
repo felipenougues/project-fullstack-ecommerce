@@ -1,7 +1,11 @@
 const db = require('../../database/models')
 module.exports = {
+
     list: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            limit: Number(req.query.limit),
+            offset: Number(req.query.offset)
+        })
         .then(products => {
             res.json({
                 count: products.length,
