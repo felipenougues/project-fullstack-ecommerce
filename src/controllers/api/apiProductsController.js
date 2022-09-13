@@ -3,14 +3,16 @@ module.exports = {
 
     list: (req,res) => {
         db.Product.findAll({
-            limit: Number(req.query.limit),
-            offset: Number(req.query.offset)
-        })
+            attributes: ["id","name","description","category_id","price", "image"],
+           
+        }) 
         .then(products => {
             res.json({
                 count: products.length,
                 countByCategory: "",
-                products: products.map(product => {
+                products: products
+
+/*                 products: products.map(product => {
                     return ({
                     id: product["id"],
                     name: product["name"],
@@ -18,7 +20,7 @@ module.exports = {
                     category: product["category_id"],
                     detail: req.protocol + '://' + req.get('host') + req.originalUrl
                     }
-                )})
+                )}) */
             })
         })
     },

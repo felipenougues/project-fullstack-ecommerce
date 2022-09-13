@@ -35,7 +35,7 @@ const controller = {
 				db.User.create({
 					...req.body,
 					password: bcryptjs.hashSync(req.body.password, 10),
-					Image: req.file.filename,
+					image: req.file.filename,
 				})
 				return res.redirect('/users/login')
 			}

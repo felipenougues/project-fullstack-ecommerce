@@ -96,11 +96,13 @@ p{
     flex:50%;
     font-size: 1.3rem;
 }
-.info__stock select{
+.info__stock select,
+.info__stock input{
     border: none;
     border-radius: 3px;
+    padding: 10px 0;
+    text-align: center;
     width: 50%;
-    height: 25px;
     font-size: .8rem;
     background:lightseagreen;
     color: white;
@@ -108,7 +110,7 @@ p{
     transition: all .4s ease;
 }
 .info__stock select:hover{
-    opacity: .5;
+    opacity: .8;
     border: 1px solid white;
 }
 
