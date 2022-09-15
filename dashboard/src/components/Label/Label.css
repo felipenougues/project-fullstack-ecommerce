@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    margin-left: 40px;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.title{
+    font-size: 1.7rem;
+}
+
+.value{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.description{
+    font-size: 1.4rem;
+    border-top: 1px solid black;
+    display: inline-block;
+    width: 100%;
+}
