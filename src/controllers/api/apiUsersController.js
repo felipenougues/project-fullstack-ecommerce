@@ -2,8 +2,9 @@ const db = require('../../database/models')
 module.exports = {
     list: (req,res) => {
         db.User.findAll({
-            limit: Number(req.query.limit),
-            offset: Number(req.query.offset)
+            limit: Number(req.query.limit || 10),
+            offset: Number(req.query.offset || 0),
+            attributes: { exclude: ['password'] }
         })
         .then(users => res.json({
             meta: {
@@ -17,17 +18,17 @@ module.exports = {
 
     detail: (req, res) => {
         db.User.findByPk(req.params.id)
-        .then(product => {
+        .then(user => {
             res.json({
                 meta: {
                     code: res.statusCode,
                     url: req.protocol + '://' + req.get('host') + req.originalUrl
                 },
                 data: {
-                    name: product.name,
-                    lastName: product.lastName,
-                    email: product.email,
-                    image: product.image
+                    name: user.name,
+                    lastName: user.lastName,
+                    email: user.email,
+                    image: req.protocol + '://' + req.get('host') + '/images/users/' + user.image
                 }
             })
         })
