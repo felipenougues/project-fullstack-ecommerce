@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 3030;
 const apiProductsRoutes = require('./routers/api/apiProductsRoutes')
 const apiUsersRoutes = require('./routers/api/apiUsersRoutes')
@@ -13,6 +14,8 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 
 app.set("view engine","ejs");
 app.set('views',__dirname + '/views')
+
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, './public')));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
