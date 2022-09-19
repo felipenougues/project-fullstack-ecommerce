@@ -34,6 +34,15 @@ const App = () =>  {
 
   const productColumns = ['id','Nombre', 'Categoría', 'Precio', 'Descripción']
 
+  function countUnique(iterable) {
+    return new Set(iterable).size;
+  }
+
+  const productCategories = products.map(product => product.category)
+
+  const totalCategories = countUnique(productCategories)
+
+
   return (
     <main className="App">
       <h1>Veffaly Analytics Dashboard</h1>
@@ -46,8 +55,9 @@ const App = () =>  {
         : ""
       }
       <section className='labels-container'>
-        <Label title="Productos" value={products.length} description="6 Nuevos productos en la última semana" />
-        <Label title="Usuarios" value={users.length} description="1 Nuevo usuario en el último mes" />
+        <Label title="Productos" value={products.length} description="6 Nuevos productos en la última semana" loading={loading} />
+        <Label title="Usuarios" value={users.length} description="1 Nuevo usuario en el último mes" loading={loading} />
+        <Label title="Categorías" value={totalCategories} description='"Vestidos" la categoría más visitada' loading={loading} />
       </section>
       <Table title="Productos" columns={productColumns} rows={products}/>
     </main>
