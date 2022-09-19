@@ -4,8 +4,8 @@ module.exports = {
 
     list: (req,res) => {
         db.Product.findAll({
-            attributes: ["id","name","description","category_id","price", "image", 
-        ],
+            include: [{association: 'category'}],
+            attributes: ["id","name","description","category_id","price", "image"]
         /* [sequelize.fn('concat', "la url", "/detalle", sequelize.col("product_id")), "alias"] */
         }) 
         .then(products => {
@@ -14,7 +14,8 @@ module.exports = {
                     id: product["id"],
                     name: product["name"],
                     description: product["description"],
-                    category: product["category_id"],
+                    price: product["price"],
+                    category: product["category"]["name_category"],
                     image: req.protocol + '://' + req.get('host') + "/images/products/" + product['image']
                 })
             });
