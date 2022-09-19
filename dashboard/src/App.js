@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import './App.css'
+import { useEffect, useState } from 'react';
 import Label from './components/Label/Label'
+import Table from './components/Table/Table'
 
 const App = () =>  {
 
@@ -26,19 +27,29 @@ const App = () =>  {
         const { users } = data
         setUsers(users)
       })
-    }, 2000);
+    }, 4000);
     
 
   },[])
 
+  const productColumns = ['id','Nombre', 'Categoría', 'Precio', 'Descripción']
+
   return (
     <main className="App">
-      <h1>Dashboard</h1>
+      <h1>Veffaly Analytics Dashboard</h1>
       {
-        loading ? <p>Cargando...</p> : "..."
+        loading ? 
+        <div className='loading'>
+          <span>Cargando... </span>
+          <img src='http://cdn.onlinewebfonts.com/svg/img_1586.png' alt='loading'/>
+        </div>
+        : ""
       }
-      <Label title="Productos" value={products.length} description="Test" />
-      <Label title="Usuarios" value={users.length} description="Test" />
+      <section className='labels-container'>
+        <Label title="Productos" value={products.length} description="6 Nuevos productos en la última semana" />
+        <Label title="Usuarios" value={users.length} description="1 Nuevo usuario en el último mes" />
+      </section>
+      <Table title="Productos" columns={productColumns} rows={products}/>
     </main>
   );
 }
