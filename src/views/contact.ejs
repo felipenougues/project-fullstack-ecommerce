@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs',{title:"Contact", stylesheets:["index.css", "contact.css"]}) %>         <!-- Inclusión de Head con EJS -->
+
+
+<body>
+    <%- include('partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
+    <h1>CONTACTANOS</h1>
+    <form class="contact-form">
+        <input type="email" name="email" placeholder="Correo">
+        <input type="text" name="about" placeholder="Asunto">
+        <textarea name="message" placeholder="Mensaje..."></textarea>
+        <div>
+            <button class="send" type="submit">Enviar</button>
+            <button class="back"><a href="/">Volver</a></button>
+        </div>
+    </form>
+    <%- include('partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
+</body>
+</html>
