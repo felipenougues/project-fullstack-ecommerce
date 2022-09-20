@@ -7,17 +7,15 @@
             </label>
             <nav class="header__overlay">
                 <ul>
-                    <li class="nav-li"><a href="#">HOMBRES</a></li>
-                    <li class="nav-li"><a href="#">MUJERES</a></li>
-                    <li class="nav-li"><a href="#">NIÑOS</a></li>
+                    <li class="nav-li"><a href="/about">SOBRE NOSOTROS</a></li>
+                    <li class="nav-li"><a href="/contact">CONTACTANOS</a></li>
                 </ul>
             </nav>
         </div>
         <nav class="header__nav--desktop">
             <ul>
-                <li class="nav-deskt-li"><a href="#">HOMBRES</a></li>
-                <li class="nav-deskt-li"><a href="#">MUJERES</a></li>
-                <li class="nav-deskt-li"><a href="#">NIÑOS</a></li>
+                <li class="nav-deskt-li"><a href="/about">SOBRE NOSOTROS</a></li>
+                <li class="nav-deskt-li"><a href="/contact">CONTACTANOS</a></li>
             </ul>
         </nav>
         <div class="logo__container">
@@ -27,22 +25,39 @@
         <div class="header__icons">
             <div class="icon-search">
                 <form action="products/productSearch" method="GET">
-                    <input type="text" placeholder=" Buscar" name="search">
+                    <input type="text" placeholder="Buscar productos..." name="search">
                     <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
-            <div class="Bolsa">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-            <div class="login">
-                <i class="fas fa-user user"></i>
-            </div>
-            <div class="user__overlay hidden">
-                <ul class="user__select">
-                    <li class="user-li"><a href="/users/login">Ingresá</a></li>
-                    <li class="user-li"><a href="/users/register">Registrate</a></li>
-                </ul>
-            </div> 
+            <% if(locals.isLogged){ %>
+                <div class="Bolsa">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="userLogged">
+                    <span>Hi, <%= locals.userLogged.name %></span>
+                    <img src="/images/users/<%= locals.userLogged.image %>" height="40" width="40" style="border-radius: 100%; object-fit:cover">
+                </div>
+                <div class="userLogged__overlay hidden">
+                    <ul class="user__select">
+                        <li class="user-li"><a href="/">Inicio</a></li>
+                        <li class="user-li"><a href="/users/profile">Mi Perfil</a></li>
+                        <li class="user-li"><a href="/users/logout">Cerrar Sesión</a></li>
+                    </ul>
+                </div> 
+
+            <% } else { %>
+                <div class="login">
+                    <i class="fas fa-user user"></i>
+                </div>
+                <div class="user__overlay hidden">
+                    <ul class="user__select">
+                        <li class="user-li"><a href="/users/login">Ingresá</a></li>
+                        <li class="user-li"><a href="/users/register">Registrate</a></li>
+                    </ul>
+                </div> 
+            <% } %> 
+
+
         </div>
     </div>
 </header>
