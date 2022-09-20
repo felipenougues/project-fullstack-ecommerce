@@ -1,14 +1,12 @@
-
 const { validationResult } = require('express-validator');
-const User = require("../../models/User.js");
+const db = require('../database/models')
 const bcryptjs = require("bcryptjs");
 
-const db = require('../database/models')
 
 const controller = {
     register: (req,res) => res.render('users/register'),
 
-    processRegister: (req, res) =>{
+    registerProcess: (req, res) =>{
         const resultValidation = validationResult(req);
 
 		db.User.findOne({where:{
@@ -50,19 +48,20 @@ const controller = {
 		db.User.findOne({where:{
 			email: req.body.email
 		}})
-		.then((resultado)=>{
-			if(resultado) {
-				let isOkThePassword = bcryptjs.compareSync(req.body.password, resultado.password);
-				if (isOkThePassword) {
-					delete resultado.password;
-					req.session.userLogged = resultado;
-	
-					if(req.body.remember_user) {
-						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-					}
-	
-					return res.redirect('/users/profile');
+		.then((user)=>{
+
+			let isOkThePassword = user === null ? false : bcryptjs.compareSync(req.body.password, user.password);
+
+			if (isOkThePassword) {
+				delete user.password;
+				req.session.userLogged = user;
+
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60, path: '/', domain: req.hostname })
 				}
+
+				return res.redirect('/users/profile');
+
 			}
 			return res.render('users/login', {
 				errors: {msg: 'Las credenciales son inválidas'}
@@ -70,8 +69,15 @@ const controller = {
 		})
     },
 	profile: (req,res) => {
-		db.User.findAll()
-		.then(users => {return res.json(users)})
+		return res.render('users/profile', {user: req.session.userLogged})
+	},
+
+	logout: (req, res) =>{
+		res.clearCookie('userEmail', {path: '/', domain: req.hostname});
+	/* 	res.cookie('userEmail', "", { expires: new Date(), path: '/', domain: req.hostname, overwrite: true }) */	
+		console.log(req.cookies.userEmail);
+		req.session.destroy();
+		return res.redirect('/')
 	}
 }
 

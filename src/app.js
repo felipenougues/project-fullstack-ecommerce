@@ -11,6 +11,7 @@ const usersRoutes = require("./routers/usersRoutes")
 const session = require("express-session");
 const cookies = require('cookie-parser');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 app.set("view engine","ejs");
 app.set('views',__dirname + '/views')
@@ -27,6 +28,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 app.use(cookies());
+app.use(userLoggedMiddleware)
 
 app.use("/api/products", apiProductsRoutes)
 app.use("/api/users", apiUsersRoutes)
