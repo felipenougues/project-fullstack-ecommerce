@@ -236,7 +236,7 @@ header .nav-li {
     display: none;
 }
 
-.user__overlay{
+.user__overlay, .userLogged__overlay{
     border: 1px solid var(--Text);
     width: 160px;
     height: 200px;
@@ -245,6 +245,16 @@ header .nav-li {
     top: 45px;
     z-index: 10;
     background-color: rgba(175, 151, 140, 0.9);
+}
+
+.userLogged{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.userLogged:hover{
+    opacity: .8;
 }
 
 .user__select li{
@@ -295,6 +305,14 @@ header .nav-li {
     transition: all .4s ease;
 }
 
+
+.banner__slogan button a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: brown;
+}
+
 .banner__slogan button:hover {
     border: 1px solid white;
     opacity: 0.7;
@@ -312,8 +330,9 @@ main h2 {
     color: var(--Titles);
     font-size: 1.7rem;
     font-weight: bold;
-    margin: 20px auto;
+    margin: 60px auto 30px;
     width: 90%;
+    border-bottom: 1px solid var(--Text);
 }
 
 main section {
@@ -428,6 +447,7 @@ footer h6 {
     background-color: black;
     color: white;
     border-radius: 0;
+    cursor: pointer;
 }
 .newsletter-img{
     width: 100%;

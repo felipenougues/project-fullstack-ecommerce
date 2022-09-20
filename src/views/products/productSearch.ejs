@@ -6,28 +6,24 @@
     <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
     <main>
         <section>
-            <ul>
-                <% for(let i=0;i<productos.length; i++){ %>
-                    <li class="list_product">
-                        <a href="/products/productDetail/<%= productos[i].id %>">
-                            <img class="image_product"src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>">
-                            <p class="product_description"><%= productos[i].description %></p>
-                        </a>
-                        <div class="anterior_sell">
-                            <h3><%= productos[i].name %></h3>
-                            <div>
-                                <p class="precio_ant">
-                                    USD $<%= productos[i].price %>
-                                </p>
-                                <p class="precio_ahora">
-                                    USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                <% } %>
-            </ul>
-
+                <h1>Nuestros Productos</h1>
+            <% for(let i=0;i<productos.length; i++){ %>
+                <article class="product">
+                    <div class="product__image-container">
+                        <img class="product__image" src="/images/products/<%= productos[i].image %>" alt="producto<%= productos[i].id %>">
+                    </div>
+                    <div class="product__detail">
+                        <h3><%= productos[i].name %></h3>
+                        <p class="product_description"><%= productos[i].description %></p>
+                    </div>
+                    <div class="product__price">
+                        <p class="price">USD $<%= productos[i].price %></p>
+                        <p class="discount">Oferta USD $<%= (productos[i].price * (1 - productos[i].discount / 100)) %></p>
+                    </div>
+                    
+                    <a class="link-detail" href="/products/productDetail/<%= productos[i].id %>">Ver Detalle</a>
+                </article>
+            <% } %>
         </section>
     </main>
     <%- include('../partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->

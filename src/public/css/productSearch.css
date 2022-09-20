@@ -1,39 +1,87 @@
-
-main{
-    min-height: 100vh;
-}
-
-section{
+main section{
+    display: block;
     width: 90%;
     margin: auto;
     padding: 30px;
     background-color: #F3e2d4;
     border: 1px solid gainsboro;
 }
-.resume_item  {
-    max-width: 100%;
-}
-.list_product{
-    border: 1px solid #F3e2d4;
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
 
-}
-.image_product{
-    margin: 20px;
-    width:20%;
-    border-radius:10px;
+h1{
     text-align: center;
+    text-decoration: underline;
+    font-size: 2.4rem;
+    color: var(--Text);
+    margin: 20px 0 60px;
 }
-form{
-    display: none
-}
-a{
+
+.product{
+    width: 100%;
+    border: 2px solid rgb(135, 124, 124);
     display: flex;
-    align-items: center;
-    text-decoration: none;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: rgba(244, 237, 230, 0.79);
+    gap: 50px;
 }
-.product_description{
-    display: inline-block;
+
+.product__image{
+    object-fit: cover;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.product__detail{
+    width: 40%;
+    margin: auto 0;
+}
+.product__detail h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product__price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 2rem;
+    flex: 1;
+}
+
+.price{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: brown;
+}
+
+.discount{
+    font-size: 1.6rem;
+    color: rgb(213, 66, 66);
+}
+
+
+
+.link-detail{
+    display: block;
+    width: 15%;
+    height: 50px;
+    margin: auto 20px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    color: #71625b;
+    background-image: linear-gradient(#af978c,#af978c);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: all .4s ease;
+}
+
+.link-detail:hover{
+    background-size: 100% 100%;
+    color: white;
 }

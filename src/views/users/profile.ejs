@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs',{title:"Mi Perfil",stylesheets:["profile.css"]}) %>
+<body>
+    <%- include('../partials/header.ejs') %>       <!-- Inclusión de Header con EJS -->
+    <h1>Mi Perfil</h1>
+    <main>
+        <section class="profile">
+            <h2>Bienvenido, <%= user.name %></h2>
+            <div>
+                <h3>Foto de Perfil:</h3>
+                <img src="/images/users/<%= user.image %> ">
+            </div>
+            <div>
+                <h3>Mis datos Personales:</h3>
+                <p><strong>Nombre: </strong> <%= user.name %></p>
+                <p><strong>Apellido: </strong> <%= user.lastName %></p>
+                <p><strong>Email: </strong> <%= user.email %></p>
+            </div>
+            <a href="/users/logout">Cerrar Sesión</a>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>       <!-- Inclusión de Footer con EJS -->
+</body>
+</html>

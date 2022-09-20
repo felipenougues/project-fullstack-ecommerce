@@ -26,10 +26,13 @@ main {
     background-color: #00304E;
     width: 70%;
     margin: 30px auto;
+    transition: all .3s ease;
 }
 
 .boton:hover {
     cursor: pointer;
+    opacity: .9;
+    outline: 1px solid black;
 }
 
 .cuadrante {

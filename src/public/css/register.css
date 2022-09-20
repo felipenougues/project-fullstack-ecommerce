@@ -40,11 +40,13 @@ label{
     background-color: #00304E;
     width: 70%;
     margin: 30px auto;
+    transition: all .3s ease;
 }
 
 .boton:hover {
     cursor: pointer;
-    background-image: linear-gradient(225deg, #0022aa 0%, #00f0b8 100%);
+    opacity: .9;
+    outline: 1px solid white;
 }
 
 
