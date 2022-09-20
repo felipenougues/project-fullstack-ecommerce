@@ -1,0 +1,14 @@
+body{
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin: 60px;
+}
+
+p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 60px;
+}
