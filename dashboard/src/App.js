@@ -1,5 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react';
+import Header from './components/Header/Header'
 import Label from './components/Label/Label'
 import Table from './components/Table/Table'
 
@@ -44,8 +45,10 @@ const App = () =>  {
 
 
   return (
+    <>
+    <Header />
     <main className="App">
-      <h1>Veffaly Analytics Dashboard</h1>
+      <h1>Dashboard</h1>
       {
         loading ? 
         <div className='loading'>
@@ -61,6 +64,7 @@ const App = () =>  {
       </section>
       <Table title="Productos" columns={productColumns} rows={products}/>
     </main>
+    </>
   );
 }
 

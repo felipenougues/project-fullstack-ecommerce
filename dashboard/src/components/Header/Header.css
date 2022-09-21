@@ -1,0 +1,30 @@
+header{
+    background-color: rgb(4, 39, 58);
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255,255,255, 0.7);
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all .4s ease;
+}
+
+a:hover{
+
+    opacity: .8;
+}
+
+.nav{
+    display: flex;
+    gap: 60px;
+}
