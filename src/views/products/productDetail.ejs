@@ -39,6 +39,12 @@
                     <div class="info__price">
                         <p>$ <%= producto.price %></p><span><%= producto.discount %> % OFF</span>
                     </div>
+                    <div class="info__description">
+                        <h6>Descripción</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ratione voluptas atque placeat id mollitia sapiente at autem excepturi natus omnis saepe repudiandae, quas ullam, quidem facere? Modi, eos suscipit!</p>
+                    </div>
+                </div>
+                <div class="product__buy">
                     <p class="info__shipping"><i class="fas fa-truck truck"></i>Envío gratis a todo el país</p>
                     <div class="info__stock">
                         <div class="stock__sizes">
@@ -56,15 +62,12 @@
                         </div>
                     </div>
                     <button class="cart-add">Agregar a mi Carrito<i class="fas fa-cart-plus cart"></i></button>
-                    <div class="info__description">
-                        <h6>Descripción</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ratione voluptas atque placeat id mollitia sapiente at autem excepturi natus omnis saepe repudiandae, quas ullam, quidem facere? Modi, eos suscipit!</p>
-                    </div>
-                   
-                    <a href="/products/productEdit/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-					<form action="/products/productDetail/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-					</form>
+                    <div class="actions-container">
+                        <a href="/products/productEdit/<%= producto.id %>" class="action-button edit">EDITAR</a>
+                        <form action="/products/productDetail/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+                    </div>                  
                 </div>
             </div>
         </section>
