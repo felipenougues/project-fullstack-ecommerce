@@ -31,7 +31,6 @@ main section{
 
 main section a{
     text-decoration: none;
-    background-color: var(--Text);
     color: white;
     opacity: .9;
     text-align: center;
@@ -40,9 +39,25 @@ main section a{
     padding: 20px;
     width: 150px;
     height: 60px;
+    background-color: rgb(100, 52, 52);
+    background-image: linear-gradient(brown,brown);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
     transition: all .5s ease;
 }
 
 main section a:hover{
-    opacity: 1;
+    background-size: 100% 100%;
+}
+
+.new-product{
+    background-color: rgb(82, 95, 26);
+    background-image: linear-gradient(rgb(101, 152, 30),rgb(101, 152, 30));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: all .4s ease;
+}
+
+.new-product:hover{
+    background-size: 100% 100%;
 }
