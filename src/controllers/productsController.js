@@ -59,7 +59,7 @@ const controller = {
 				discount: req.body.discount,
 				image: req.file?.filename || "banner1.jpg"
 			})
-			res.redirect("/products/productList")
+			res.redirect("/products/productSearch?search=")
 		}
 	},
     
@@ -87,7 +87,7 @@ const controller = {
 				id: req.params.id
 			}
 		})
-		res.redirect("/products/productList")
+		res.redirect("/products/productSearch?search=")
 	},
 
     // DELETE
@@ -97,7 +97,7 @@ const controller = {
 				id: req.params.id
 			}
 		})
-		res.redirect("/products/productList");
+		res.redirect("/products/productSearch?search=");
 	},
 	
 };
