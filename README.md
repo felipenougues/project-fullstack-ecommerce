@@ -1,5 +1,10 @@
 INDUSTRIAS DE LAS PRENDAS UNIDAS :)
 -------------------------------------
+
+Complete ecommerce project where a group of fullstack developers apply all the knowledge !
+
+The project is about textile industry , where we create some unique clothing that comes from the scraps of the big companys.
+
 ¿Quieres saber de nosotros?, ¡Qué bien!, nosotros nos dedicamos a reconstruir prendas y crear modelos únicos para la venta, nuestra industria se especializa principalmente en lo textil.
 Es necesario resaltar que nuestro público va dirigido para todos aquellos que les guste lucir
 un estilo semi-urbano y vestidos casuales, y  utilizamos prendas viejas para reutilizarlas como modelos nuevos
